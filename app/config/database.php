@@ -1,5 +1,4 @@
 <?php
-
 namespace app\config;
 
 use PDO;
