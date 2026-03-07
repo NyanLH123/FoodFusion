@@ -1,6 +1,6 @@
 <?php
 define('APP_ROOT', dirname(dirname(__FILE__)));
-define('BASE_URL', 'http://localhost/projects/foodfusion/');
+define('BASE_URL', 'http://localhost/projects/foodfusion/public/');
 
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'foodfusion');

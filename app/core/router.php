@@ -1,10 +1,9 @@
 <?php
-
 namespace app\core;
 
 class Router
 {
-    protected $controller = '';
+    protected $controller = 'Home';
     protected $method = 'index';
     protected $params = [];
 
@@ -12,11 +11,10 @@ class Router
     {
         $url = $this->getUrl();
 
-        if (isset($url[0]) && file_exists('../app/controllers/' . $url[0] . '.php')) {
-            $this->controller = $url[0];
+        // Determine Controller
+        if (isset($url[0]) && file_exists('../app/controllers/' . ucfirst($url[0]) . '.php')) {
+            $this->controller = ucfirst($url[0]);
             unset($url[0]);
-        } else {
-            $this->controller = 'Home';
         }
 
         require_once '../app/controllers/' . $this->controller . '.php';
@@ -25,9 +23,10 @@ class Router
         if (class_exists($controllerClass)) {
             $this->controller = new $controllerClass;
         } else {
-            die('Controller not found');
+            die('Controller class not found: ' . $controllerClass);
         }
 
+        // Determine Method
         if (isset($url[1])) {
             if (method_exists($this->controller, $url[1])) {
                 $this->method = $url[1];
@@ -46,6 +45,7 @@ class Router
             $url = filter_var($url, FILTER_SANITIZE_URL);
             return explode('/', $url);
         }
-        return [];
+        return [];  // Don't die - return empty for homepage
     }
 }
+?>

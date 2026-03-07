@@ -13,7 +13,7 @@ spl_autoload_register(function ($class) {
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-use app\core\Router;
+use app\core\Router;    
 use app\core\Session;
 
 Session::init();
