@@ -27,7 +27,7 @@ use app\core\Session; ?>
         </ul>
         <ul class="nav-links">
             <?php if (Session::get('user_id')): ?>
-                <li><a href="<?= BASE_URL ?>auth/logout">Logout (<?php echo htmlspecialchars(Session::get('user_name')); ?>)</a></li>
+                <li><a href="<?= BASE_URL ?>auth/logout">Logout <?php echo Session::get('user_name'); ?></a></li>
             <?php else: ?>
                 <li><a href="<?= BASE_URL ?>auth/login">Login</a></li>
             <?php endif; ?>

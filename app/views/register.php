@@ -28,16 +28,16 @@
             <?php endif; ?>
             
             <!-- Registration Form (Task 2 & 4) -->
-            <form action="register.php" method="POST" novalidate>
+            <form action="<?php echo BASE_URL; ?>auth/register" method="POST" novalidate>
                 <!-- Task 2: Security - CSRF Token -->
-                <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
+                <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token'] ?? ''); ?>">
                 
                 <div class="form-group">
                     <label for="firstname">First Name <span class="required">*</span></label>
                     <input 
                         type="text" 
                         id="firstname" 
-                        name="firstname" 
+                        name="first_name" 
                         
                         required 
                         autocomplete="given-name"
@@ -51,7 +51,7 @@
                     <input 
                         type="text" 
                         id="lastname" 
-                        name="lastname" 
+                        name="last_name" 
                         
                         required 
                         autocomplete="family-name"

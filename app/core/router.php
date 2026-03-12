@@ -47,5 +47,6 @@ class Router
         }
         return [];  // Don't die - return empty for homepage
     }
+    
 }
 ?>

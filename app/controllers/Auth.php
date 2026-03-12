@@ -16,7 +16,7 @@ class Auth extends Controller
         $this->userModel = new UserModel();
         $this->session = new Session();
     }
-    
+
     public function index()
     {
         $this->view('register');
@@ -24,17 +24,24 @@ class Auth extends Controller
 
     public function login()
     {
-        $this->view('login');
+        $this->session->generateCsrfToken();
+        $this->view('login', ['csrf_token' => $this->session->get('csrf_token')]);
     }
 
     public function authenticate()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (!$this->session->verifyCsrfToken($_POST['csrf_token'] ?? '')) {
+                $this->view('login', ['error' => 'Invalid security token.']);
+                return;
+            }
             $email = $_POST['email'] ?? '';
             $password = $_POST['password'] ?? '';
 
+            $attemptedLogin = 0;
+
             if (empty($email) || empty($password)) {
-                $this->view('login', ['error' => 'Please fill in all fields.']);
+                $this->view('login', ['error' => 'Please fill in the required fields.']);
                 return;
             }
 
@@ -44,11 +51,12 @@ class Auth extends Controller
                 $this->session->set('first_name', $user['first_name']);
                 $this->session->set('last_name', $user['last_name']);
                 $this->session->set('email', $user['email']);
-                header('Location: ' . BASE_URL . 'home');
+
+                $this->view('home', ['user' => $user]);
                 exit();
             } else {
                 $this->view('login', ['error' => 'Invalid email or password.']);
-                header('Location: ' . BASE_URL . 'auth');
+                $attemptedLogin++;
                 exit();
             }
         } else {
@@ -75,21 +83,21 @@ class Auth extends Controller
 
             // Basic validation
             if (empty($first_name) || empty($last_name) || empty($email) || empty($password)) {
-                $this->view('login', ['error' => 'Please fill in all fields.']);
+                $this->view('register', ['error' => 'Please fill in the required fields.']);
                 return;
             }
 
             $existingUser = $this->userModel->IsExistingEmail($email);
             if ($existingUser) {
-                $this->view('login', ['error' => 'Email already exists.']);
+                $this->view('register', ['error' => 'Email already exists.']);
                 return;
             }
 
-            $this->userModel->createUser($first_name, $last_name, $email, $password);
-            header('Location: ' . BASE_URL . 'home');
+            $this->userModel->createUser($first_name, $last_name, $email, password_hash($password, PASSWORD_BCRYPT));
+            $this->view('login', ['success' => 'Registration successful. Please log in.']);
             exit();
         } else {
-            header('Location: ' . BASE_URL . 'auth');
+            $this->view('register', ['error' => 'Invalid request method.']);
             exit();
         }
     }

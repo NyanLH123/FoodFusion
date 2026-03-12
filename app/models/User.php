@@ -25,7 +25,7 @@ class User extends Model
         $stmt->bindParam(':first_name', $first_name);
         $stmt->bindParam(':last_name', $last_name);
         $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':password', password_hash($password, PASSWORD_BCRYPT));
+        $stmt->bindParam(':password', $password);
         return $stmt->execute();
     }
 
