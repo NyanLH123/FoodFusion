@@ -26,6 +26,17 @@ class Home extends Controller
         $this->view('community', ['title' => 'Community']);
     }
 
+    public function recipeDetail()
+    {
+        $this->view('recipe-detail', ['title' => 'Recipe Detail']);
+    }
+
+    public function notFound()
+    {
+        http_response_code(404);
+        $this->view('404', ['title' => 'Not Found']);
+    }
+
     public function culinary()
     {
         $this->view('culinary', ['title' => 'Culinary']);
