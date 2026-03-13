@@ -1,76 +1,52 @@
 <?php
-
 namespace app\core;
 
 class Router
 {
-    private $controller = 'Home';
-    private $method = 'index';
-    private $params = [];
+    protected $controller = 'Home';
+    protected $method = 'index';
+    protected $params = [];
 
-    private $routes = [
-        'GET' => [],
-        'POST' => []
-    ];
-
-    public function dispatch()
+    public function __construct()
     {
-        $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
-        $path = $this->getPath();
+        $url = $this->getUrl();
 
-        if (isset($this->routes[$method][$path])) {
-            $handler = $this->routes[$method][$path];
-            $this->controller = $handler['controller'];
-            $this->method = $handler['method'];
-            return $this->callController();
+        // Determine Controller
+        if (isset($url[0]) && file_exists('../app/controllers/' . ucfirst($url[0]) . '.php')) {
+            $this->controller = ucfirst($url[0]);
+            unset($url[0]);
         }
 
-        http_response_code(404);
-        die("Route not found: $method $path");
+        require_once '../app/controllers/' . $this->controller . '.php';
+        $controllerClass = 'app\\controllers\\' . $this->controller;
 
+        if (class_exists($controllerClass)) {
+            $this->controller = new $controllerClass;
+        } else {
+            die('Controller class not found: ' . $controllerClass);
+        }
+
+        // Determine Method
+        if (isset($url[1])) {
+            if (method_exists($this->controller, $url[1])) {
+                $this->method = $url[1];
+                unset($url[1]);
+            }
+        }
+
+        $this->params = $url ? array_values($url) : [];
+        call_user_func_array([$this->controller, $this->method], $this->params);
     }
 
-    public function add($method, $path, $handler)
+    public function getUrl()
     {
-        $handler = is_callable($handler) ? $handler : explode('/', $handler);
-        $method = strtoupper($method);
-        if (!in_array($method, ['GET', 'POST'])) {
-            throw new \InvalidArgumentException("Unsupported HTTP method: $method");
+        if (isset($_GET['url'])) {
+            $url = rtrim($_GET['url'], '/');
+            $url = filter_var($url, FILTER_SANITIZE_URL);
+            return explode('/', $url);
         }
-        $this->routes[$method][$path] = [
-            'controller' => $handler[0],
-            'method' => $handler[1],
-            'params' => $handler[2] ?? []
-        ];
+        return [];  // Don't die - return empty for homepage
     }
-
-    public function getPath()
-    {
-        $url = $_SERVER['REQUEST_URI'] ?? '/';
-        $path = rtrim(parse_url($url, PHP_URL_PATH), '/');
-        return $path === '' ? '/' : $path;
-    }
-
-    public function callController() {
-        $file = __DIR__ . '/../controllers/' . ucfirst($this->controller) . '.php';
-        if (!file_exists($file)) {
-            http_response_code(404);
-            die("Controller file not found: {$this->controller}");
-        }
-
-        require_once $file;
-        $class = "app\\controllers\\" . ucfirst($this->controller);
-        if (!class_exists($class)) {
-            http_response_code(500);
-            die("Controller class not found: {$class}");
-        }
-
-        $obj = new $class();
-        if (!method_exists($obj, $this->method)) {
-            http_response_code(404);
-            die("Method {$this->method} not found in {$this->controller}");
-        }
-
-        call_user_func_array([$obj, $this->method], $this->params);
-    }
+    
 }
+?>
