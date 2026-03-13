@@ -1,22 +1,14 @@
-<?php
-spl_autoload_register(function ($class) {
+<?php 
 
-    $root = dirname(__DIR__) . '/app/';
+require_once __DIR__ . '/../vendor/autoload.php';
 
-    $class = str_replace('app\\', '', $class);
-    $path = $root . str_replace('\\', '/', $class) . '.php';
+$router = new app\core\Router();
 
-    if (file_exists($path)) {
-        require_once $path;
-    }
-});
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// Define your routes here
+$router->add('GET', '/', ['Home', 'index']);
+$router->add('GET', '/about', ['Home', 'about']);
 
-use app\core\Router;    
-use app\core\Session;
+$router->dispatch();
 
-Session::init();
-// Initialize Router
-new Router();
+
 ?>

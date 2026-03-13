@@ -1,18 +1,22 @@
-<?php
+<?php 
 namespace app\core;
-require_once '../app/config/config.php';
+use app\core\Session;
 
 class Controller {
+    public function __construct()
+    {
+        Session::init();
+    }
+
     public function view($view, $data = [])
     {
-        extract($data);
-        $file = \APP_ROOT . '\views\\' . $view . '.php';
-
-        if (file_exists($file)) {
-            include $file;
+        $viewPath = \APP_ROOT . '/views/' . $view . '.php';
+        if (file_exists($viewPath)) {
+            extract($data);
+            require $viewPath;
         } else {
-            echo $file;
-            die('View not found');
+            throw new \Exception("View not found: $view");
         }
     }
 }
+?>
