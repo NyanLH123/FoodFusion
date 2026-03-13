@@ -7,6 +7,9 @@
         </header>
 
         <form class="form-grid elevated" action="#" method="post">
+
+        <h1>Contact Us</h1>
+        <form class="form-grid" action="#" method="post">
             <label>Name<input type="text" required></label>
             <label>Email<input type="email" required></label>
             <label>Subject<input type="text" required></label>
@@ -21,7 +24,11 @@
             <button class="btn btn-accent" type="submit">Send Message</button>
         </form>
     </section>
+
     <aside class="card elevated">
+
+    <aside class="card">
+
         <h2>Contact Info</h2>
         <p>Email: hello@foodfusion.example</p>
         <p>Phone: +60 12-345 6789</p>
