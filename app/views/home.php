@@ -1,240 +1,61 @@
 <?php include 'layouts/header.php'; ?>
-
-<!-- Hero Section: Mission Statement -->
-<header class="hero">
-    <h1>Welcome to FoodFusion</h1>
-    <p>Promoting home cooking and culinary creativity among food enthusiasts.</p>
-    
-    <!-- Task 4: Social Media Links Prominently Displayed -->
-    <div class="hero-socials" aria-label="Social Media Links">
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">Twitter</a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
-    </div>
-    
-    <!-- Login CTA for Task 2 Security Requirements -->
-    <div class="auth-buttons">
-        <a href="login.php" class="btn-login">Login</a>
-        <button id="openJoinUs" class="btn-signup" aria-haspopup="dialog">Join Us</button>
-    </div>
-</header>
-
-<!-- Task 4: "Join Us" Pop-up Form (Registration) -->
-<!-- Structure for Modal - Hidden by default via CSS, triggered by JS -->
-    <div id="joinUsModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Join Our Community</h2>
-            <form action="/foodfusion/public/auth/register" method="POST">
-                <!-- CSRF Protection -->
-                <div class="form-group">
-                    <label for="firstname">First Name <span class="required">*</span></label>
-                    <input 
-                        type="text" 
-                        id="firstname" 
-                        name="firstname" 
-                        
-                        required 
-                        autocomplete="given-name"
-                        aria-required="true"
-                        aria-describedby="firstname-error"
-                    >
-                </div>
-                
-                <div class="form-group">
-                    <label for="lastname">Last Name <span class="required">*</span></label>
-                    <input 
-                        type="text" 
-                        id="lastname" 
-                        name="lastname" 
-                        
-                        required 
-                        autocomplete="family-name"
-                        aria-required="true"
-                        aria-describedby="lastname-error"
-                    >
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email <span class="required">*</span></label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        
-                        required 
-                        autocomplete="email"
-                        aria-required="true"
-                        aria-describedby="email-error"
-                    >
-                </div>
-                
-                <div class="form-group">
-                    <label for="password">Password <span class="required">*</span></label>
-                    <input 
-                        type="password" 
-                        id="password" 
-                        name="password" 
-                        required 
-                        autocomplete="new-password"
-                        aria-required="true"
-                        aria-describedby="password-requirements"
-                        minlength="8"
-                    >
-                </div>
-                
-                <div class="form-group">
-                    <label for="confirm_password">Confirm Password <span class="required">*</span></label>
-                    <input 
-                        type="password" 
-                        id="confirm_password" 
-                        name="confirm_password" 
-                        required 
-                        autocomplete="new-password"
-                        aria-required="true"
-                    >
-                </div>
-                <button type="submit" class="btn-primary">Sign Up Now</button>
-            </form>
+<main id="main-content">
+    <section class="hero section">
+        <div class="hero-overlay container">
+            <p class="eyebrow"></p>
+            <h1>FoodFusion elevates everyday cooking.</h1>
+            <p class="subtitle">Discover curated recipes, meaningful culinary trends, and a thoughtful community crafted with a premium, minimal experience.</p>
+            <button class="btn btn-accent" id="heroJoinUs" type="button">Join Us</button>
         </div>
-    </div>
+    </section>
 
-<!-- Task 3: Carousel for Upcoming Cooking Events -->
-<section class="carousel" aria-label="Upcoming Cooking Events">
-    <h2>Upcoming Cooking Events</h2>
-    <div class="carousel-container">
-        <!-- Slide 1 -->
-        <div class="slide">
-            <img src="assets/images/event-italian.jpg" alt="Italian Night Cooking Class">
-            <h3>Italian Night</h3>
-            <p>Join us for a live cooking session on Pasta Making!</p>
-            <date>2026-11-15</date>
-        </div>
-        <!-- Slide 2 -->
-        <div class="slide">
-            <img src="assets/images/event-asian.jpg" alt="Asian Fusion Workshop">
-            <h3>Asian Fusion Workshop</h3>
-            <p>Learn the secrets of Wok cooking.</p>
-            <date>2026-11-20</date>
-        </div>
-        <!-- Slide 3 -->
-        <div class="slide">
-            <img src="assets/images/event-dessert.jpg" alt="Healthy Desserts Class">
-            <h3>Healthy Desserts</h3>
-            <p>Sweet treats without the guilt.</p>
-            <date>2026-11-25</date>
-        </div>
-    </div>
-    <!-- Carousel Controls -->
-    <button class="prev" aria-label="Previous Slide">&#10094;</button>
-    <button class="next" aria-label="Next Slide">&#10095;</button>
-</section>
+    <section class="section container mission-panel">
+        <h2>Mission</h2>
+        <p class="muted">We empower home cooks with elegant guidance, global inspiration, and sustainability-first habits—making every kitchen session more creative and connected.</p>
+    </section>
 
-<!-- Task 3: Integrated News Feed (Recipes & Trends) -->
-<section class="news-feed">
-    <h2>FoodFusion News & Recipes</h2>
-    
-    <!-- Featured Recipes -->
-    <div class="feed-section">
-        <h3>Featured Recipes</h3>
-        <div class="recipe-grid">
-            <div class="card">
-                <img src="assets/images/pasta.jpg" alt="Plate of Pasta Carbonara">
-                <h3>Pasta Carbonara</h3>
-                <p>Classic Italian dish.</p>
-                <a href="recipe.php?id=1">View Recipe</a>
-                <!-- Task 4: Social Media Integration (Share Buttons) -->
-                <div class="share-links">
-                    <span>Share:</span>
-                    <a href="#" aria-label="Share on Facebook">FB</a>
-                    <a href="#" aria-label="Share on Twitter">TW</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/images/curry.jpg" alt="Vegetable Curry Dish">
-                <h3>Vegetable Curry</h3>
-                <p>Spicy and healthy.</p>
-                <a href="recipe.php?id=2">View Recipe</a>
-                <div class="share-links">
-                    <span>Share:</span>
-                    <a href="#" aria-label="Share on Facebook">FB</a>
-                    <a href="#" aria-label="Share on Twitter">TW</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/images/cake.jpg" alt="Chocolate Cake Slice">
-                <h3>Chocolate Cake</h3>
-                <p>Dessert favorite.</p>
-                <a href="recipe.php?id=3">View Recipe</a>
-                <div class="share-links">
-                    <span>Share:</span>
-                    <a href="#" aria-label="Share on Facebook">FB</a>
-                    <a href="#" aria-label="Share on Twitter">TW</a>
-                </div>
-            </div>
+    <section class="section container">
+        <div class="section-head"><h2>Featured Recipes / Trends</h2><a href="<?= BASE_URL ?>home/recipes" class="text-link">View all</a></div>
+        <div class="card-grid three">
+            <article class="card feature-card"><span class="chip">Recipe</span><h3>Lemon Burrata Linguine</h3><p>Silky, bright, and ready in 20 minutes with restaurant-level presentation.</p></article>
+            <article class="card feature-card"><span class="chip">Trend</span><h3>Micro-Seasonal Cooking</h3><p>How chefs and home cooks are planning menus around hyper-local produce cycles.</p></article>
+            <article class="card feature-card"><span class="chip">Recipe</span><h3>Thai Basil Crispy Tofu</h3><p>Bold aromatics and crisp textures with quick wok-friendly prep flow.</p></article>
         </div>
-    </div>
+    </section>
 
-    <!-- Culinary Trends -->
-    <div class="feed-section">
-        <h3>Culinary Trends</h3>
-        <div class="trend-grid">
-            <div class="card">
-                <h3>Sustainable Cooking</h3>
-                <p>How to reduce waste in the kitchen.</p>
-            </div>
-            <div class="card">
-                <h3>Plant-Based Revolution</h3>
-                <p>The rise of vegan gourmet.</p>
-            </div>
+    <section class="section container">
+        <h2>Upcoming Cooking Events</h2>
+        <div class="events-track" id="eventsTrack">
+            <article class="card event-card"><p class="event-date">May 12</p><h3>Street Taco Night</h3><p>Live community cook-along with plating walkthrough.</p></article>
+            <article class="card event-card"><p class="event-date">May 19</p><h3>Knife Skills Studio</h3><p>Precision cuts, sharpening basics, and prep-efficiency techniques.</p></article>
+            <article class="card event-card"><p class="event-date">May 27</p><h3>Plant-Forward Sunday</h3><p>Flavor-dense vegetarian menu design with protein balancing.</p></article>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Task 4: Cookie Consent Pop-up -->
-<div id="cookieConsent" class="cookie-banner" role="alert">
-    <p>We use cookies to enhance your experience and track user interactions. <a href="privacy.php">Privacy Policy</a></p>
-    <button id="acceptCookies">Accept</button>
-</div>
+    <section class="section container two-col preview-band">
+        <article class="card preview-card">
+            <h2>About Preview</h2>
+            <p class="muted">Explore our values, mission, and the team shaping FoodFusion’s culinary direction.</p>
+            <a class="btn" href="<?= BASE_URL ?>home/about">Explore About Us</a>
+        </article>
+        <article class="card preview-card">
+            <h2>Community Preview</h2>
+            <p class="muted">Browse social-style posts from members sharing personal recipes, cooking stories, and tips.</p>
+            <a class="btn" href="<?= BASE_URL ?>home/community">Visit Community Cookbook</a>
+        </article>
+    </section>
 
+    <section class="section container two-col">
+        <article class="card resource-preview">
+            <h3>Culinary Resources</h3>
+            <p>Technique videos, quick-reference cards, and practical kitchen hacks.</p>
+            <a class="btn" href="<?= BASE_URL ?>home/culinary">Open Culinary Resources</a>
+        </article>
+        <article class="card resource-preview">
+            <h3>Educational Resources</h3>
+            <p>Food sustainability, eco-kitchen learning, and practical low-waste guidance.</p>
+            <a class="btn" href="<?= BASE_URL ?>home/educational">Open Educational Resources</a>
+        </article>
+    </section>
+</main>
 <?php include 'layouts/footer.php'; ?>
-
-<!-- Placeholder for JavaScript functionality -->
-<!-- In production, this would be in a separate .js file -->
-<script>
-    // Modal Logic for Join Us
-    const modal = document.getElementById("joinUsModal");
-    const btn = document.getElementById("openJoinUs");
-    const span = document.getElementsByClassName("close")[0];
-
-    if(btn) {
-        btn.onclick = function() { modal.style.display = "block"; }
-    }
-    if(span) {
-        span.onclick = function() { modal.style.display = "none"; }
-    }
-    // Close modal if clicked outside
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-    
-    // Cookie Consent Logic
-    const cookieBanner = document.getElementById("cookieConsent");
-    const acceptBtn = document.getElementById("acceptCookies");
-    
-    if(!localStorage.getItem('cookiesAccepted')) {
-        cookieBanner.style.display = "flex";
-    } else {
-        cookieBanner.style.display = "none";
-    }
-
-    if(acceptBtn) {
-        acceptBtn.onclick = function() {
-            localStorage.setItem('cookiesAccepted', 'true');
-            cookieBanner.style.display = "none";
-        }
-    }
-</script>
-
