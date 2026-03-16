@@ -1,52 +1,45 @@
 <?php
 namespace app\core;
-
 class Router
 {
-    protected $controller = 'Home';
-    protected $method = 'index';
-    protected $params = [];
+    protected $routes = [];
 
-    public function __construct()
+    public function add($method, $path, $handler)
     {
-        $url = $this->getUrl();
+        $method = strtoupper($method);
 
-        // Determine Controller
-        if (isset($url[0]) && file_exists('../app/controllers/' . ucfirst($url[0]) . '.php')) {
-            $this->controller = ucfirst($url[0]);
-            unset($url[0]);
-        }
+        // Normalize path
+        $path = $this->normalizePath($path);
 
-        require_once '../app/controllers/' . $this->controller . '.php';
-        $controllerClass = 'app\\controllers\\' . $this->controller;
+        // Convert handler to callable
+        $handler = is_callable($handler) ? $handler : [new $handler[0], $handler[1]];
 
-        if (class_exists($controllerClass)) {
-            $this->controller = new $controllerClass;
-        } else {
-            die('Controller class not found: ' . $controllerClass);
-        }
-
-        // Determine Method
-        if (isset($url[1])) {
-            if (method_exists($this->controller, $url[1])) {
-                $this->method = $url[1];
-                unset($url[1]);
-            }
-        }
-
-        $this->params = $url ? array_values($url) : [];
-        call_user_func_array([$this->controller, $this->method], $this->params);
+        $this->routes[$method][$path] = $handler;
     }
 
-    public function getUrl()
+    protected function normalizePath($path)
     {
-        if (isset($_GET['url'])) {
-            $url = rtrim($_GET['url'], '/');
-            $url = filter_var($url, FILTER_SANITIZE_URL);
-            return explode('/', $url);
-        }
-        return [];  // Don't die - return empty for homepage
+        return '/' . trim($path, '/');
     }
-    
+
+    protected function getUrl()
+    {
+        $url = parse_url($_SERVER['REQUEST_URL'], PHP_URL_PATH);
+        return $this->normalizePath($url);
+    }
+
+    public function dispatch()
+    {
+        $method = $_SERVER['REQUEST_METHOD'];
+        $path = $this->getUrl();
+
+        if (isset($this->routes[$method][$path])) {
+            $handler = $this->routes[$method][$path];
+
+            return call_user_func($handler);
+        }
+
+        http_response_code(404);
+        echo "404 Not Found";
+    }
 }
-?>

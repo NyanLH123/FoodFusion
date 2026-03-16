@@ -5,13 +5,6 @@
             <p class="eyebrow"></p>
             <h1>FoodFusion elevates everyday cooking.</h1>
             <p class="subtitle">Discover curated recipes, meaningful culinary trends, and a thoughtful community crafted with a premium, minimal experience.</p>
-
-        <div class="hero-overlay">
-            <p class="eyebrow"> </p>
-            <h1>Cook Better, Share More, Live Deliciously.</h1>
-            <p class="subtitle">A clean home for modern recipes, trends, community stories, and practical learning.</p>
-            <button class="btn btn-accent" id="heroJoinUs" type="button">Join Us</button>
-        </div>
     </section>
 
     <section class="section container mission-panel">
@@ -61,11 +54,6 @@
             <p>Food sustainability, eco-kitchen learning, and practical low-waste guidance.</p>
             <a class="btn" href="<?= BASE_URL ?>home/educational">Open Educational Resources</a>
         </article>
-
-    <section class="section container">
-        <h2>Mission</h2>
-        <p class="muted">FoodFusion inspires everyday cooks to create confidently, explore global food culture, and build meaningful community through simple, sustainable cooking.</p>
-    </section>
 
     <section class="section container">
         <h2>Featured Recipes / Trends</h2>

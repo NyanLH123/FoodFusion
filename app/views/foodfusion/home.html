@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodFusion | Modern Culinary Platform</title>
+  <meta
+    name="description"
+    content="FoodFusion is a premium culinary startup platform for recipe discovery, food education, cooking events, and community-led inspiration."
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="FoodFusion home">
+        <span class="brand-mark">F</span>
+        <span>FoodFusion</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="navPanel"
+        data-nav-toggle
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-panel" id="navPanel">
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="community.html">Community</a>
+          <a href="resources.html">Resources</a>
+          <a href="education.html">Education</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn btn-ghost" type="button" data-open-modal="authModal">Login</button>
+          <button class="btn btn-primary" type="button" data-open-modal="signupModal">Join Us</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Culinary Startup Platform</span>
+          <h1 class="mb-4">A modern home for recipes, food learning, and culinary community.</h1>
+          <p>
+            FoodFusion brings together curated recipes, educational cooking resources,
+            community participation, and event-led experiences in one clean, premium platform.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" data-open-modal="signupModal">
+              Sign Up Now
+            </button>
+            <a href="recipes.html" class="btn btn-secondary">Explore Recipes</a>
+          </div>
+
+          <div class="stats-grid mt-6">
+            <div class="stat-box">
+              <div class="stat-value">250+</div>
+              <div class="stat-label">Curated recipes</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value">40+</div>
+              <div class="stat-label">Learning resources</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value">12k</div>
+              <div class="stat-label">Community members</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-card">
+            <div class="card-meta">
+              <span>Featured Experience</span>
+              <span>Weekly Pick</span>
+            </div>
+            <h3 class="mb-2">Curated menus and thoughtful cooking guidance</h3>
+            <p>
+              Discover modern recipes, save your favorites, attend live sessions,
+              and learn practical culinary techniques through a more focused digital experience.
+            </p>
+
+            <div class="recipe-tags mt-4">
+              <span>Bookmark recipes</span>
+              <span>Join events</span>
+              <span>Learn techniques</span>
+            </div>
+          </div>
+
+          <div class="media-placeholder" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Recipes -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Featured Recipes</span>
+            <h2 class="section-title">Curated dishes for modern kitchens</h2>
+            <p class="section-text">
+              Explore recipes selected for clarity, flavor balance, visual simplicity,
+              and practical day-to-day cooking.
+            </p>
+          </div>
+          <a href="recipes.html" class="btn btn-secondary">View All</a>
+        </div>
+
+        <div class="recipe-grid">
+          <article class="card recipe-card" data-recipe-id="recipe-101">
+            <button class="bookmark-btn" type="button" data-bookmark="recipe-101" aria-label="Bookmark recipe">
+              ☆
+            </button>
+            <div class="card-media">
+              <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80"
+                alt="Creamy mushroom pasta plated elegantly"
+              />
+            </div>
+            <div class="card-meta">
+              <span>Italian</span>
+              <span>35 min</span>
+            </div>
+            <h3 class="card-title">Wild Mushroom Pasta</h3>
+            <p>
+              A refined pasta recipe built around texture, depth, and simple ingredient quality.
+            </p>
+            <div class="recipe-tags">
+              <span>Vegetarian</span>
+              <span>Intermediate</span>
+              <span>Editor Pick</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-secondary" type="button" data-open-modal="recipePreviewModal">
+                Quick View
+              </button>
+            </div>
+          </article>
+
+          <article class="card recipe-card" data-recipe-id="recipe-102">
+            <button class="bookmark-btn" type="button" data-bookmark="recipe-102" aria-label="Bookmark recipe">
+              ☆
+            </button>
+            <div class="card-media">
+              <img
+                src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1200&q=80"
+                alt="Balanced grain bowl with vegetables and avocado"
+              />
+            </div>
+            <div class="card-meta">
+              <span>Fusion</span>
+              <span>25 min</span>
+            </div>
+            <h3 class="card-title">Harvest Grain Bowl</h3>
+            <p>
+              A clean, balanced bowl combining grains, greens, roasted vegetables, and freshness.
+            </p>
+            <div class="recipe-tags">
+              <span>Vegan</span>
+              <span>Easy</span>
+              <span>Wellness</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-secondary" type="button" data-open-modal="recipePreviewModal">
+                Quick View
+              </button>
+            </div>
+          </article>
+
+          <article class="card recipe-card" data-recipe-id="recipe-103">
+            <button class="bookmark-btn" type="button" data-bookmark="recipe-103" aria-label="Bookmark recipe">
+              ☆
+            </button>
+            <div class="card-media">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
+                alt="Seared salmon with greens and vegetables"
+              />
+            </div>
+            <div class="card-meta">
+              <span>Nordic</span>
+              <span>40 min</span>
+            </div>
+            <h3 class="card-title">Seared Salmon & Greens</h3>
+            <p>
+              A polished seafood dish centered on freshness, simplicity, and balanced plating.
+            </p>
+            <div class="recipe-tags">
+              <span>Pescatarian</span>
+              <span>Advanced</span>
+              <span>Signature</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-secondary" type="button" data-open-modal="recipePreviewModal">
+                Quick View
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Culinary Trends / News -->
+    <section class="section surface-muted">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Culinary Trends</span>
+            <h2 class="section-title">What is shaping modern food culture</h2>
+            <p class="section-text">
+              Editorial updates covering practical cooking shifts, ingredient trends,
+              and the changing expectations of modern home dining.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-meta">
+              <span>Trend Report</span>
+              <span>04 min read</span>
+            </div>
+            <h3 class="card-title">Ingredient quality is becoming more important than recipe complexity</h3>
+            <p>
+              More home cooks are choosing fewer components with better sourcing and clearer outcomes.
+            </p>
+            <div class="card-actions">
+              <button class="btn btn-ghost" type="button" data-open-modal="trendModal">
+                Read Summary
+              </button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-meta">
+              <span>Consumer Insight</span>
+              <span>03 min read</span>
+            </div>
+            <h3 class="card-title">Simple plating and cleaner presentation are influencing home cooking</h3>
+            <p>
+              Visual calm, deliberate composition, and restrained garnish choices are increasingly valued.
+            </p>
+            <div class="card-actions">
+              <button class="btn btn-ghost" type="button" data-open-modal="trendModal">
+                Read Summary
+              </button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-meta">
+              <span>Food Strategy</span>
+              <span>05 min read</span>
+            </div>
+            <h3 class="card-title">Education-led food platforms are gaining attention beyond traditional blogs</h3>
+            <p>
+              People increasingly want recipe platforms that also teach methods, habits, and confidence.
+            </p>
+            <div class="card-actions">
+              <button class="btn btn-ghost" type="button" data-open-modal="trendModal">
+                Read Summary
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cooking Events Carousel -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Cooking Events</span>
+            <h2 class="section-title">Live sessions, workshops, and community-led experiences</h2>
+            <p class="section-text">
+              Join curated cooking events that combine instruction, discussion, and shared food inspiration.
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel" data-carousel>
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <article class="card">
+                <div class="story-block">
+                  <div class="stack">
+                    <span class="badge">Live Workshop</span>
+                    <h3>Seasonal Plating Masterclass</h3>
+                    <p>
+                      Learn how to improve dish presentation with stronger composition,
+                      cleaner contrast, and better visual rhythm.
+                    </p>
+                    <p class="small-text"><strong>Date:</strong> April 12, 2026</p>
+                    <p class="small-text"><strong>Format:</strong> Virtual Session</p>
+                    <div class="card-actions">
+                      <button class="btn btn-primary" type="button" data-open-modal="signupModal">
+                        Reserve a Spot
+                      </button>
+                    </div>
+                  </div>
+                  <div class="media-placeholder" aria-hidden="true"></div>
+                </div>
+              </article>
+            </div>
+
+            <div class="carousel-slide">
+              <article class="card">
+                <div class="story-block">
+                  <div class="stack">
+                    <span class="badge">Chef Talk</span>
+                    <h3>Balanced Weeknight Cooking</h3>
+                    <p>
+                      A focused session on planning simple, flavorful meals with better ingredients
+                      and more efficient home-kitchen routines.
+                    </p>
+                    <p class="small-text"><strong>Date:</strong> April 19, 2026</p>
+                    <p class="small-text"><strong>Format:</strong> Hybrid Event</p>
+                    <div class="card-actions">
+                      <button class="btn btn-primary" type="button" data-open-modal="signupModal">
+                        Register Interest
+                      </button>
+                    </div>
+                  </div>
+                  <div class="media-placeholder" aria-hidden="true"></div>
+                </div>
+              </article>
+            </div>
+
+            <div class="carousel-slide">
+              <article class="card">
+                <div class="story-block">
+                  <div class="stack">
+                    <span class="badge">Community Session</span>
+                    <h3>Global Comfort Foods Exchange</h3>
+                    <p>
+                      Discover how community members reinterpret classic comfort dishes
+                      using modern ingredients and contemporary cooking techniques.
+                    </p>
+                    <p class="small-text"><strong>Date:</strong> April 27, 2026</p>
+                    <p class="small-text"><strong>Format:</strong> Online Community Event</p>
+                    <div class="card-actions">
+                      <button class="btn btn-primary" type="button" data-open-modal="signupModal">
+                        Join Event
+                      </button>
+                    </div>
+                  </div>
+                  <div class="media-placeholder" aria-hidden="true"></div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="carousel-controls">
+            <button class="carousel-btn" type="button" data-carousel-prev aria-label="Previous slide">←</button>
+            <div class="carousel-dots" aria-label="Carousel navigation">
+              <button class="carousel-dot active" type="button" data-carousel-dot="0" aria-label="Go to slide 1"></button>
+              <button class="carousel-dot" type="button" data-carousel-dot="1" aria-label="Go to slide 2"></button>
+              <button class="carousel-dot" type="button" data-carousel-dot="2" aria-label="Go to slide 3"></button>
+            </div>
+            <button class="carousel-btn" type="button" data-carousel-next aria-label="Next slide">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Testimonials</span>
+            <h2 class="section-title">What members say about FoodFusion</h2>
+            <p class="section-text">
+              A premium platform experience shaped by recipe quality, educational value, and community depth.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="testimonial">
+            <p>
+              “FoodFusion feels more focused than a typical recipe platform. It helps me discover better dishes
+              without the clutter.”
+            </p>
+            <div class="testimonial-author">
+              <div class="avatar" aria-hidden="true"></div>
+              <div>
+                <h4>Elena Morris</h4>
+                <p class="small-text">Product Designer</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial">
+            <p>
+              “I like the combination of recipes, events, and practical technique education. It feels curated and useful.”
+            </p>
+            <div class="testimonial-author">
+              <div class="avatar" aria-hidden="true"></div>
+              <div>
+                <h4>Marcus Lee</h4>
+                <p class="small-text">Home Cook</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial">
+            <p>
+              “The design is calm, the content is strong, and the community features make it feel more complete.”
+            </p>
+            <div class="testimonial-author">
+              <div class="avatar" aria-hidden="true"></div>
+              <div>
+                <h4>Sophia Chen</h4>
+                <p class="small-text">Community Member</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+      <div class="container">
+        <div class="story-panel">
+          <div class="story-block">
+            <div class="stack">
+              <span class="eyebrow">Get Started</span>
+              <h2>Join a more modern culinary platform</h2>
+              <p>
+                Save recipes, explore trends, attend cooking events, and participate in a community
+                designed for thoughtful food discovery.
+              </p>
+              <div class="hero-actions">
+                <button class="btn btn-primary" type="button" data-open-modal="signupModal">
+                  Create Account
+                </button>
+                <a href="community.html" class="btn btn-secondary">Visit Community</a>
+              </div>
+            </div>
+            <div class="media-placeholder" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secondary CTA -->
+    <section class="section-sm">
+      <div class="container text-center">
+        <span class="eyebrow">Start Exploring</span>
+        <h2 class="section-title" style="margin-inline:auto;">Browse recipes, resources, and education</h2>
+        <p class="section-text" style="margin-inline:auto;">
+          FoodFusion is designed to support cooking inspiration, learning, and participation in one connected experience.
+        </p>
+        <div class="hero-actions flex-center mt-5">
+          <a href="recipes.html" class="btn btn-primary">Open Recipe Library</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-mark">F</span>
+            <span>FoodFusion</span>
+          </a>
+          <p>
+            A modern culinary startup platform for curated recipes, educational food content,
+            events, and community-led inspiration.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="mb-3">Explore</h4>
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="community.html">Community</a>
+            <a href="resources.html">Resources</a>
+            <a href="education.html">Education</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="mb-3">Social</h4>
+          <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">YouTube</a>
+            <a href="#">X / Twitter</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="small-text">© 2026 FoodFusion. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#" class="small-text">Privacy Policy</a>
+          <a href="#" class="small-text">Cookies</a>
+          <a href="contact.html" class="small-text">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-banner" id="cookieBanner" aria-live="polite">
+    <div class="cookie-inner">
+      <div>
+        <h4 class="mb-2">We use cookies</h4>
+        <p class="small-text">
+          FoodFusion uses essential and analytics cookies to improve your experience and personalize content.
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button class="btn btn-secondary" type="button" data-cookie="decline">Decline</button>
+        <button class="btn btn-primary" type="button" data-cookie="accept">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div class="modal" id="signupModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow">Join FoodFusion</span>
+        <h3 class="mb-2">Create your account</h3>
+        <p>
+          Start saving recipes, attending events, and participating in the FoodFusion community.
+        </p>
+      </div>
+
+      <form class="form-card" data-validate-form novalidate>
+        <div class="form-grid">
+          <div class="form-field">
+            <label class="form-label" for="signupName">Full Name</label>
+            <input class="text-input" type="text" id="signupName" name="name" required />
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="signupEmail">Email Address</label>
+            <input class="text-input" type="email" id="signupEmail" name="email" required />
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="signupPassword">Password</label>
+            <div class="password-wrap">
+              <input class="text-input" type="password" id="signupPassword" name="password" required minlength="6" />
+              <button class="password-toggle" type="button" data-toggle-password="#signupPassword">Show</button>
+            </div>
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="signupConfirm">Confirm Password</label>
+            <div class="password-wrap">
+              <input class="text-input" type="password" id="signupConfirm" name="confirmPassword" required minlength="6" />
+              <button class="password-toggle" type="button" data-toggle-password="#signupConfirm">Show</button>
+            </div>
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field full-width">
+            <button class="btn btn-primary btn-block" type="submit">Sign Up Now</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Auth Modal -->
+  <div class="modal" id="authModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow">Member Access</span>
+        <h3 class="mb-2">Login, register, or recover access</h3>
+        <p>
+          Access saved recipes, bookmarks, event registrations, and personalized platform features.
+        </p>
+      </div>
+
+      <div class="auth-shell">
+        <div class="auth-card">
+          <h3 class="mb-4">Login</h3>
+          <form data-login-form novalidate>
+            <div class="form-field mb-4">
+              <label class="form-label" for="loginEmail">Email</label>
+              <input class="text-input" type="email" id="loginEmail" name="email" required />
+              <span class="error-text"></span>
+            </div>
+
+            <div class="form-field mb-4">
+              <label class="form-label" for="loginPassword">Password</label>
+              <div class="password-wrap">
+                <input class="text-input" type="password" id="loginPassword" name="password" required minlength="6" />
+                <button class="password-toggle" type="button" data-toggle-password="#loginPassword">Show</button>
+              </div>
+              <span class="error-text"></span>
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit">Login</button>
+
+            <div class="lockout-box hidden mt-4" data-lockout-message>
+              Too many failed attempts. Please wait
+              <strong data-lockout-timer>03:00</strong>
+              before trying again.
+            </div>
+
+            <div class="mt-4">
+              <button class="btn btn-ghost" type="button" data-open-modal="forgotPasswordModal">
+                Forgot Password?
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="auth-card">
+          <h3 class="mb-4">Register</h3>
+          <form data-validate-form novalidate>
+            <div class="form-field mb-4">
+              <label class="form-label" for="registerName">Full Name</label>
+              <input class="text-input" type="text" id="registerName" name="name" required />
+              <span class="error-text"></span>
+            </div>
+
+            <div class="form-field mb-4">
+              <label class="form-label" for="registerEmail">Email</label>
+              <input class="text-input" type="email" id="registerEmail" name="email" required />
+              <span class="error-text"></span>
+            </div>
+
+            <div class="form-field mb-4">
+              <label class="form-label" for="registerPassword">Password</label>
+              <div class="password-wrap">
+                <input class="text-input" type="password" id="registerPassword" name="password" required minlength="6" />
+                <button class="password-toggle" type="button" data-toggle-password="#registerPassword">Show</button>
+              </div>
+              <span class="error-text"></span>
+            </div>
+
+            <button class="btn btn-secondary btn-block" type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forgot Password Modal -->
+  <div class="modal" id="forgotPasswordModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow">Password Recovery</span>
+        <h3 class="mb-2">Reset password</h3>
+        <p>Enter your email to simulate a password reset request.</p>
+      </div>
+
+      <form class="form-card" data-validate-form novalidate>
+        <div class="form-field mb-4">
+          <label class="form-label" for="resetEmail">Email Address</label>
+          <input class="text-input" type="email" id="resetEmail" name="email" required />
+          <span class="error-text"></span>
+        </div>
+
+        <button class="btn btn-primary btn-block" type="submit">Send Reset Link</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Recipe Preview Modal -->
+  <div class="modal" id="recipePreviewModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow">Recipe Preview</span>
+        <h3 class="mb-2">Featured recipe snapshot</h3>
+        <p>
+          Preview a curated recipe experience before exploring the full recipe collection.
+        </p>
+      </div>
+
+      <div class="stack">
+        <div class="media-placeholder" aria-hidden="true"></div>
+        <p>
+          Full recipes include ingredient lists, preparation steps, dietary labels,
+          bookmark options, and deeper filtering tools inside the recipes page.
+        </p>
+        <div class="recipe-tags">
+          <span>Bookmark enabled</span>
+          <span>Quick view</span>
+          <span>Detailed modal</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trend Modal -->
+  <div class="modal" id="trendModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow">Editorial Summary</span>
+        <h3 class="mb-2">Modern food culture is becoming more focused</h3>
+        <p>
+          People increasingly value recipe platforms that combine clarity, education,
+          and community participation rather than endless browsing alone.
+        </p>
+      </div>
+
+      <div class="stack">
+        <p>
+          Better ingredients, simpler preparation, and cleaner presentation are defining the next generation
+          of home cooking experiences.
+        </p>
+        <p>
+          FoodFusion responds by combining curated food content, educational material,
+          and community-driven interaction in one cohesive platform.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

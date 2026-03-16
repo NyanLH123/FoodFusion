@@ -19,7 +19,6 @@ class Session {
     public static function destroy() {
         session_destroy();
     }
-
     
     public static function generateCsrfToken() {
         if (empty($_SESSION['csrf_token'])) {
@@ -33,9 +32,5 @@ class Session {
             return true;
         }
         return false;
-    }
-
-    public function regenerateCsrfToken() {
-        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     }
 }
