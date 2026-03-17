@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodFusion | Community</title>
+  <meta
+    name="description"
+    content="Join the FoodFusion community cookbook, explore shared recipes, and submit your own culinary ideas."
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="FoodFusion home">
+        <span class="brand-mark">F</span>
+        <span>FoodFusion</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="navPanel"
+        data-nav-toggle
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-panel" id="navPanel">
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="community.html" class="active">Community</a>
+          <a href="resources.html">Resources</a>
+          <a href="education.html">Education</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn btn-ghost" type="button" data-open-modal="authModal">Login</button>
+          <button class="btn btn-primary" type="button" data-open-modal="joinModal">Join Us</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <!-- Page heading -->
+    <section class="section-sm">
+      <div class="container">
+        <span class="eyebrow">Community Cookbook</span>
+        <div class="section-head">
+          <div>
+            <h1 class="section-title">Share recipes and connect through food</h1>
+            <p class="section-text">
+              FoodFusion’s community space highlights user-submitted recipes, practical cooking ideas,
+              and shared culinary inspiration from food enthusiasts.
+            </p>
+          </div>
+          <button class="btn btn-primary" type="button" data-open-modal="submissionInfoModal">
+            How It Works
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community overview -->
+    <section class="section-sm pt-0">
+      <div class="container">
+        <div class="grid grid-3">
+          <article class="stat-box">
+            <div class="stat-value">120+</div>
+            <div class="stat-label">Shared recipes</div>
+          </article>
+          <article class="stat-box">
+            <div class="stat-value">3.4k</div>
+            <div class="stat-label">Community saves</div>
+          </article>
+          <article class="stat-box">
+            <div class="stat-value">48</div>
+            <div class="stat-label">Active contributors</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shared recipes -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">User-Shared Recipes</span>
+            <h2 class="section-title">Popular contributions from the community</h2>
+            <p class="section-text">
+              Explore a small selection of community recipes with diverse cuisines, cooking styles,
+              and dietary approaches.
+            </p>
+          </div>
+        </div>
+
+        <div class="recipe-grid">
+          <article class="card recipe-card">
+            <button class="bookmark-btn" type="button" data-bookmark="community-301" aria-label="Bookmark recipe">
+              ☆
+            </button>
+            <div class="card-media">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80"
+                alt="Fresh vegetable salad bowl"
+              />
+            </div>
+            <div class="card-meta">
+              <span>Shared by Maya</span>
+              <span>Easy</span>
+            </div>
+            <h3 class="card-title">Garden Fresh Lentil Bowl</h3>
+            <p>
+              A colourful, protein-rich bowl with lentils, greens, vegetables, and a lemon herb dressing.
+            </p>
+            <div class="recipe-tags">
+              <span>Mediterranean</span>
+              <span>Vegan</span>
+            </div>
+            <div class="card-actions">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                data-open-modal="communityRecipeModal"
+                data-recipe-title="Garden Fresh Lentil Bowl"
+                data-recipe-meta="Shared by Maya • Mediterranean • Vegan • Easy"
+                data-recipe-description="A vibrant lentil bowl designed for clean everyday eating with freshness, texture, and simple assembly."
+                data-recipe-ingredients="Cooked lentils, cucumber, tomato, parsley, mixed greens, olive oil, lemon, black pepper"
+                data-recipe-steps="Prepare vegetables; mix dressing; arrange lentils and greens; top with vegetables; finish with lemon dressing."
+              >
+                View Details
+              </button>
+            </div>
+          </article>
+
+          <article class="card recipe-card">
+            <button class="bookmark-btn" type="button" data-bookmark="community-302" aria-label="Bookmark recipe">
+              ☆
+            </button>
+            <div class="card-media">
+              <img
+                src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1200&q=80"
+                alt="Noodle dish with vegetables"
+              />
+            </div>
+            <div class="card-meta">
+              <span>Shared by Daniel</span>
+              <span>Intermediate</span>
+            </div>
+            <h3 class="card-title">Chili Garlic Noodle Toss</h3>
+            <p>
+              A quick noodle dish with heat, savoury depth, and crisp vegetables for weeknight cooking.
+            </p>
+            <div class="recipe-tags">
+              <span>Asian</span>
+              <span>Vegetarian</span>
+            </div>
+            <div class="card-actions">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                data-open-modal="communityRecipeModal"
+                data-recipe-title="Chili Garlic Noodle Toss"
+                data-recipe-meta="Shared by Daniel • Asian • Vegetarian • Intermediate"
+                data-recipe-description="A fast and flavourful noodle recipe that combines heat, umami, and texture in one pan."
+                data-recipe-ingredients="Noodles, garlic, chilli flakes, soy sauce, sesame oil, spring onion, carrots"
+                data-recipe-steps="Cook noodles; prepare sauce; sauté garlic and vegetables; toss with noodles and sauce; garnish and serve."
+              >
+                View Details
+              </button>
+            </div>
+          </article>
+
+          <article class="card recipe-card">
+            <button class="bookmark-btn" type="button" data-bookmark="community-303" aria-label="Bookmark recipe">
+              ☆
+            </button>
+            <div class="card-media">
+              <img
+                src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1200&q=80"
+                alt="Breakfast toast with eggs and avocado"
+              />
+            </div>
+            <div class="card-meta">
+              <span>Shared by Sofia</span>
+              <span>Easy</span>
+            </div>
+            <h3 class="card-title">Herbed Avocado Breakfast Toast</h3>
+            <p>
+              A simple breakfast plate with creamy avocado, herbs, and a bright citrus finish.
+            </p>
+            <div class="recipe-tags">
+              <span>Fusion</span>
+              <span>Vegetarian</span>
+            </div>
+            <div class="card-actions">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                data-open-modal="communityRecipeModal"
+                data-recipe-title="Herbed Avocado Breakfast Toast"
+                data-recipe-meta="Shared by Sofia • Fusion • Vegetarian • Easy"
+                data-recipe-description="A light and satisfying breakfast option that focuses on texture, freshness, and easy preparation."
+                data-recipe-ingredients="Bread, avocado, lemon juice, herbs, olive oil, egg optional, sea salt"
+                data-recipe-steps="Toast bread; mash avocado; season; spread over toast; finish with herbs and optional egg."
+              >
+                View Details
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Submission form + tips -->
+    <section class="section surface-muted">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <div class="section-head">
+              <div>
+                <span class="eyebrow">Submit a Recipe</span>
+                <h2 class="section-title">Share your own dish with the community</h2>
+                <p class="section-text">
+                  Contribute a recipe to the FoodFusion cookbook by completing the submission form below.
+                </p>
+              </div>
+            </div>
+
+            <form class="form-card" data-validate-form novalidate>
+              <div class="form-grid">
+                <div class="form-field full-width">
+                  <label class="form-label" for="recipeTitle">Recipe Title</label>
+                  <input class="text-input" type="text" id="recipeTitle" name="recipeTitle" required />
+                  <span class="error-text"></span>
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="recipeCuisine">Cuisine</label>
+                  <select class="select-input" id="recipeCuisine" name="cuisine" required>
+                    <option value="">Select cuisine</option>
+                    <option>Italian</option>
+                    <option>Fusion</option>
+                    <option>Mediterranean</option>
+                    <option>Asian</option>
+                    <option>Nordic</option>
+                    <option>Other</option>
+                  </select>
+                  <span class="error-text"></span>
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="recipeDifficulty">Difficulty</label>
+                  <select class="select-input" id="recipeDifficulty" name="difficulty" required>
+                    <option value="">Select difficulty</option>
+                    <option>Easy</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                  </select>
+                  <span class="error-text"></span>
+                </div>
+
+                <div class="form-field full-width">
+                  <label class="form-label" for="recipeIngredients">Ingredients</label>
+                  <textarea
+                    class="text-area"
+                    id="recipeIngredients"
+                    name="ingredients"
+                    placeholder="List the ingredients used in your recipe"
+                    required
+                  ></textarea>
+                  <span class="error-text"></span>
+                </div>
+
+                <div class="form-field full-width">
+                  <label class="form-label" for="recipeSteps">Cooking Steps</label>
+                  <textarea
+                    class="text-area"
+                    id="recipeSteps"
+                    name="steps"
+                    placeholder="Describe the cooking method step by step"
+                    required
+                  ></textarea>
+                  <span class="error-text"></span>
+                </div>
+
+                <div class="form-field full-width">
+                  <label class="form-label" for="dietaryType">Dietary Type</label>
+                  <select class="select-input" id="dietaryType" name="dietaryType" required>
+                    <option value="">Select dietary type</option>
+                    <option>Vegetarian</option>
+                    <option>Vegan</option>
+                    <option>Pescatarian</option>
+                    <option>High Protein</option>
+                    <option>Gluten Free</option>
+                    <option>None</option>
+                  </select>
+                  <span class="error-text"></span>
+                </div>
+
+                <div class="form-field full-width">
+                  <button class="btn btn-primary btn-block" type="submit">Submit Recipe</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="stack">
+            <div>
+              <span class="eyebrow">Cooking Tips</span>
+              <h3 class="mb-3">Helpful submission advice</h3>
+            </div>
+
+            <article class="card">
+              <h4 class="mb-2">Keep steps practical</h4>
+              <p>
+                Write short, clear instructions so others can follow your method without confusion.
+              </p>
+            </article>
+
+            <article class="card">
+              <h4 class="mb-2">Highlight flavour balance</h4>
+              <p>
+                Mention what makes your recipe special, such as freshness, spice, texture, or presentation.
+              </p>
+            </article>
+
+            <article class="card">
+              <h4 class="mb-2">Use clear ingredient naming</h4>
+              <p>
+                List ingredients consistently so readers can understand your recipe at a glance.
+              </p>
+            </article>
+
+            <div class="story-panel">
+              <span class="eyebrow">Engagement</span>
+              <h3 class="mb-2">Why contribute?</h3>
+              <p>
+                Community submissions help FoodFusion grow into a more diverse and collaborative platform.
+                Sharing a recipe lets others learn from your ideas and cooking style.
+              </p>
+              <div class="hero-actions">
+                <button class="btn btn-secondary" type="button" data-open-modal="submissionInfoModal">
+                  Contribution Guide
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community engagement -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Community Activity</span>
+            <h2 class="section-title">How members participate</h2>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-meta">
+              <span>Save</span>
+            </div>
+            <h3 class="card-title">Bookmark useful recipes</h3>
+            <p>
+              Save dishes you want to try later and build a more personal cooking collection.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-meta">
+              <span>Share</span>
+            </div>
+            <h3 class="card-title">Contribute your ideas</h3>
+            <p>
+              Add your own dishes, methods, and ingredient combinations to the community cookbook.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-meta">
+              <span>Learn</span>
+            </div>
+            <h3 class="card-title">Discover new styles</h3>
+            <p>
+              Explore how other members approach cuisine, dietary needs, and everyday cooking.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-mark">F</span>
+            <span>FoodFusion</span>
+          </a>
+          <p>
+            A modern culinary platform for recipes, food learning, and community-led inspiration.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="mb-3">Explore</h4>
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="community.html">Community</a>
+            <a href="resources.html">Resources</a>
+            <a href="education.html">Education</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="mb-3">Social</h4>
+          <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="small-text">© 2026 FoodFusion. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#" class="small-text">Privacy Policy</a>
+          <a href="#" class="small-text">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-banner" id="cookieBanner" aria-live="polite">
+    <div class="cookie-inner">
+      <div>
+        <h4 class="mb-2">Cookie notice</h4>
+        <p class="small-text">
+          We use cookies to improve your browsing experience and support site functionality.
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button class="btn btn-secondary" type="button" data-cookie="decline">Decline</button>
+        <button class="btn btn-primary" type="button" data-cookie="accept">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Join Modal -->
+  <div class="modal" id="joinModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow">Join Us</span>
+        <h3 class="mb-2">Create your account</h3>
+        <p>Register to explore recipes, events, and community features.</p>
+      </div>
+
+      <form class="form-card" data-validate-form novalidate>
+        <div class="form-grid">
+          <div class="form-field">
+            <label class="form-label" for="firstName">First Name</label>
+            <input class="text-input" type="text" id="firstName" name="firstName" required />
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="lastName">Last Name</label>
+            <input class="text-input" type="text" id="lastName" name="lastName" required />
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field full-width">
+            <label class="form-label" for="joinEmail">Email Address</label>
+            <input class="text-input" type="email" id="joinEmail" name="email" required />
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field full-width">
+            <label class="form-label" for="joinPassword">Password</label>
+            <div class="password-wrap">
+              <input class="text-input" type="password" id="joinPassword" name="password" required minlength="6" />
+              <button class="password-toggle" type="button" data-toggle-password="#joinPassword">Show</button>
+            </div>
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field full-width">
+            <button class="btn btn-primary btn-block" type="submit">Join Now</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal" id="authModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow">Login</span>
+        <h3 class="mb-2">Access your account</h3>
+        <p>Login with lockout protection after repeated failed attempts.</p>
+      </div>
+
+      <form class="form-card" data-login-form novalidate>
+        <div class="form-field mb-4">
+          <label class="form-label" for="loginEmail">Email</label>
+          <input class="text-input" type="email" id="loginEmail" name="email" required />
+          <span class="error-text"></span>
+        </div>
+
+        <div class="form-field mb-4">
+          <label class="form-label" for="loginPassword">Password</label>
+          <div class="password-wrap">
+            <input class="text-input" type="password" id="loginPassword" name="password" required minlength="6" />
+            <button class="password-toggle" type="button" data-toggle-password="#loginPassword">Show</button>
+          </div>
+          <span class="error-text"></span>
+        </div>
+
+        <button class="btn btn-primary btn-block" type="submit">Login</button>
+
+        <div class="lockout-box hidden mt-4" data-lockout-message>
+          Too many failed attempts. Please wait
+          <strong data-lockout-timer>03:00</strong>
+          before trying again.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Community Recipe Modal -->
+  <div class="modal" id="communityRecipeModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow">Community Recipe</span>
+        <h3 class="mb-2" data-modal-recipe-title>Recipe Title</h3>
+        <p data-modal-recipe-meta>Recipe meta information</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="stack">
+          <div class="media-placeholder" aria-hidden="true"></div>
+          <p data-modal-recipe-description>Recipe description appears here.</p>
+        </div>
+
+        <div class="stack">
+          <div>
+            <h4 class="mb-2">Ingredients</h4>
+            <p data-modal-recipe-ingredients>Ingredient list appears here.</p>
+          </div>
+
+          <div>
+            <h4 class="mb-2">Cooking Steps</h4>
+            <p data-modal-recipe-steps>Cooking steps appear here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Submission Info Modal -->
+  <div class="modal" id="submissionInfoModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow">Contribution Guide</span>
+        <h3 class="mb-2">How community submissions work</h3>
+        <p>
+          Share a recipe with a clear title, cuisine, ingredients, steps, difficulty, and dietary type.
+        </p>
+      </div>
+
+      <div class="stack">
+        <p>
+          Keep your submission concise and practical. Clear ingredients and well-ordered steps help
+          other users understand your recipe more easily.
+        </p>
+        <p>
+          Community content supports FoodFusion’s goal of building a more collaborative culinary platform.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

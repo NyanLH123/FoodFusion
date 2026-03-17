@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodFusion | Recipes</title>
+  <meta
+    name="description"
+    content="Browse FoodFusion recipes by cuisine, dietary preference, and difficulty."
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="FoodFusion home">
+        <span class="brand-mark">F</span>
+        <span>FoodFusion</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="navPanel"
+        data-nav-toggle
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-panel" id="navPanel">
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="recipes.html" class="active">Recipes</a>
+          <a href="community.html">Community</a>
+          <a href="resources.html">Resources</a>
+          <a href="education.html">Education</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn btn-ghost" type="button" data-open-modal="authModal">Login</button>
+          <button class="btn btn-primary" type="button" data-open-modal="joinModal">Join Us</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <!-- Compact page heading -->
+    <section class="section-sm">
+      <div class="container">
+        <span class="eyebrow">Recipe Library</span>
+        <div class="section-head">
+          <div>
+            <h1 class="section-title">Browse curated recipes</h1>
+            <p class="section-text">
+              Discover recipes by cuisine, dietary type, and cooking difficulty. Search, filter,
+              sort, preview details, and save your favourites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="section-sm pt-0">
+      <div class="container">
+        <div class="filter-bar" data-recipe-filters>
+          <input
+            class="search-input"
+            type="search"
+            placeholder="Search recipes..."
+            aria-label="Search recipes"
+            data-search-input
+          />
+
+          <select class="select-input" data-filter-cuisine aria-label="Filter by cuisine">
+            <option value="all">All Cuisines</option>
+            <option value="italian">Italian</option>
+            <option value="fusion">Fusion</option>
+            <option value="mediterranean">Mediterranean</option>
+            <option value="asian">Asian</option>
+            <option value="nordic">Nordic</option>
+          </select>
+
+          <select class="select-input" data-filter-diet aria-label="Filter by dietary preference">
+            <option value="all">All Dietary Types</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="pescatarian">Pescatarian</option>
+            <option value="high-protein">High Protein</option>
+            <option value="gluten-free">Gluten Free</option>
+          </select>
+
+          <select class="select-input" data-filter-difficulty aria-label="Filter by difficulty">
+            <option value="all">All Difficulties</option>
+            <option value="easy">Easy</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+
+          <select class="select-input" data-sort-recipes aria-label="Sort recipes">
+            <option value="default">Sort By</option>
+            <option value="name-asc">Name A–Z</option>
+            <option value="name-desc">Name Z–A</option>
+            <option value="time-asc">Time: Low to High</option>
+            <option value="time-desc">Time: High to Low</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results summary -->
+    <section class="section-sm pt-0">
+      <div class="container flex-between">
+        <div>
+          <p class="small-text">Recipe collection</p>
+          <h2>Available recipes</h2>
+        </div>
+        <p class="small-text" data-results-count>6 recipes available</p>
+      </div>
+    </section>
+
+    <!-- Recipe Grid -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="recipe-grid" data-recipe-grid>
+          <article
+            class="card recipe-card"
+            data-recipe-id="recipe-201"
+            data-name="Wild Mushroom Pasta"
+            data-cuisine="italian"
+            data-diet="vegetarian"
+            data-difficulty="intermediate"
+            data-time="35"
+          >
+            <button class="bookmark-btn" type="button" data-bookmark="recipe-201" aria-label="Bookmark recipe">☆</button>
+            <div class="card-media">
+              <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80"
+                alt="Wild mushroom pasta plated elegantly"
+              />
+            </div>
+            <div class="card-meta">
+              <span>Italian</span>
+              <span>35 min</span>
+            </div>
+            <h3 class="card-title">Wild Mushroom Pasta</h3>
+            <p>A refined pasta dish built around earthy mushrooms, cream, and simple balance.</p>
+            <div class="recipe-tags">
+              <span>Vegetarian</span>
+              <span>Intermediate</span>
+            </div>
+            <div class="card-actions">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                data-open-modal="recipeDetailModal"
+                data-recipe-title="Wild Mushroom Pasta"
+                data-recipe-meta="Italian • Vegetarian • Intermediate • 35 min"
+                data-recipe-description="A refined pasta dish with sautéed mushrooms, garlic, cream, parmesan, and fresh herbs."
+                data-recipe-ingredients="Pasta, mushrooms, garlic, olive oil, cream, parmesan, parsley, black pepper"
+                data-recipe-steps="Cook pasta; sauté mushrooms and garlic; add cream and parmesan; combine with pasta; finish with herbs."
+              >
+                View Details
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="card recipe-card"
+            data-recipe-id="recipe-202"
+            data-name="Harvest Grain Bowl"
+            data-cuisine="fusion"
+            data-diet="vegan"
+            data-difficulty="easy"
+            data-time="25"
+          >
+            <button class="bookmark-btn" type="button" data-bookmark="recipe-202" aria-label="Bookmark recipe">☆</button>
+            <div class="card-media">
+              <img
+                src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1200&q=80"
+                alt="Harvest grain bowl with vegetables and avocado"
+              />
+            </div>
+            <div class="card-meta">
+              <span>Fusion</span>
+              <span>25 min</span>
+            </div>
+            <h3 class="card-title">Harvest Grain Bowl</h3>
+            <p>A clean grain bowl with roasted vegetables, greens, and a smooth tahini dressing.</p>
+            <div class="recipe-tags">
+              <span>Vegan</span>
+              <span>Easy</span>
+            </div>
+            <div class="card-actions">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                data-open-modal="recipeDetailModal"
+                data-recipe-title="Harvest Grain Bowl"
+                data-recipe-meta="Fusion • Vegan • Easy • 25 min"
+                data-recipe-description="A modern grain bowl designed for quick preparation and balanced nutrition."
+                data-recipe-ingredients="Brown rice, quinoa, kale, avocado, roasted carrots, chickpeas, tahini, lemon"
+                data-recipe-steps="Cook grains; roast vegetables; prepare dressing; assemble bowl; finish with avocado and lemon."
+              >
+                View Details
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="card recipe-card"
+            data-recipe-id="recipe-203"
+            data-name="Seared Salmon and Greens"
+            data-cuisine="nordic"
+            data-diet="pescatarian"
+            data-difficulty="advanced"
+            data-time="40"
+          >
+            <button class="bookmark-btn" type="button" data-bookmark="recipe-203" aria-label="Bookmark recipe">☆</button>
+            <div class="card-media">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
+                alt="Seared salmon served with greens and vegetables"
+              />
+            </div>
+            <div class="card-meta">
+              <span>Nordic</span>
+              <span>40 min</span>
+            </div>
+            <h3 class="card-title">Seared Salmon & Greens</h3>
+            <p>A polished seafood plate focused on freshness, lightness, and elegant presentation.</p>
+            <div class="recipe-tags">
+              <span>Pescatarian</span>
+              <span>Advanced</span>
+            </div>
+            <div class="card-actions">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                data-open-modal="recipeDetailModal"
+                data-recipe-title="Seared Salmon & Greens"
+                data-recipe-meta="Nordic • Pescatarian • Advanced • 40 min"
+                data-recipe-description="A composed salmon dish with greens, citrus notes, and a balanced plated finish."
+                data-recipe-ingredients="Salmon fillet, green beans, spinach, lemon, butter, dill, olive oil, sea salt"
+                data-recipe-steps="Sear salmon; blanch greens; prepare lemon butter; plate carefully; finish with dill."
+              >
+                View Details
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="card recipe-card"
+            data-recipe-id="recipe-204"
+            data-name="Mediterranean Chickpea Salad"
+            data-cuisine="mediterranean"
+            data-diet="gluten-free"
+            data-difficulty="easy"
+            data-time="20"
+          >
+            <button class="bookmark-btn" type="button" data-bookmark="recipe-204" aria-label="Bookmark recipe">☆</button>
+            <div class="card-media">
+              <img
+                src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1200&q=80"
+                alt="Mediterranean chickpea salad in a serving bowl"
+              />
+            </div>
+            <div class="card-meta">
+              <span>Mediterranean</span>
+              <span>20 min</span>
+            </div>
+            <h3 class="card-title">Mediterranean Chickpea Salad</h3>
+            <p>A bright salad with chickpeas, crisp vegetables, herbs, and lemon dressing.</p>
+            <div class="recipe-tags">
+              <span>Gluten Free</span>
+              <span>Easy</span>
+            </div>
+            <div class="card-actions">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                data-open-modal="recipeDetailModal"
+                data-recipe-title="Mediterranean Chickpea Salad"
+                data-recipe-meta="Mediterranean • Gluten Free • Easy • 20 min"
+                data-recipe-description="A light salad suitable for lunch or as a side dish with crisp vegetables and lemon-olive oil dressing."
+                data-recipe-ingredients="Chickpeas, cucumber, tomato, parsley, red onion, olives, lemon, olive oil"
+                data-recipe-steps="Chop vegetables; rinse chickpeas; mix dressing; toss together; chill briefly before serving."
+              >
+                View Details
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="card recipe-card"
+            data-recipe-id="recipe-205"
+            data-name="Ginger Sesame Noodles"
+            data-cuisine="asian"
+            data-diet="vegetarian"
+            data-difficulty="intermediate"
+            data-time="30"
+          >
+            <button class="bookmark-btn" type="button" data-bookmark="recipe-205" aria-label="Bookmark recipe">☆</button>
+            <div class="card-media">
+              <img
+                src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?auto=format&fit=crop&w=1200&q=80"
+                alt="Sesame noodles garnished with herbs"
+              />
+            </div>
+            <div class="card-meta">
+              <span>Asian</span>
+              <span>30 min</span>
+            </div>
+            <h3 class="card-title">Ginger Sesame Noodles</h3>
+            <p>A warm noodle dish layered with sesame richness, ginger sharpness, and balance.</p>
+            <div class="recipe-tags">
+              <span>Vegetarian</span>
+              <span>Intermediate</span>
+            </div>
+            <div class="card-actions">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                data-open-modal="recipeDetailModal"
+                data-recipe-title="Ginger Sesame Noodles"
+                data-recipe-meta="Asian • Vegetarian • Intermediate • 30 min"
+                data-recipe-description="A comforting noodle recipe with aromatic ginger, soy, sesame, and crisp vegetables."
+                data-recipe-ingredients="Noodles, ginger, soy sauce, sesame oil, garlic, spring onion, carrots, sesame seeds"
+                data-recipe-steps="Boil noodles; prepare sauce; stir-fry vegetables; toss noodles in sauce; finish with sesame."
+              >
+                View Details
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="card recipe-card"
+            data-recipe-id="recipe-206"
+            data-name="Herb Chicken Skillet"
+            data-cuisine="mediterranean"
+            data-diet="high-protein"
+            data-difficulty="easy"
+            data-time="28"
+          >
+            <button class="bookmark-btn" type="button" data-bookmark="recipe-206" aria-label="Bookmark recipe">☆</button>
+            <div class="card-media">
+              <img
+                src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=1200&q=80"
+                alt="Herb chicken skillet with vegetables"
+              />
+            </div>
+            <div class="card-meta">
+              <span>Mediterranean</span>
+              <span>28 min</span>
+            </div>
+            <h3 class="card-title">Herb Chicken Skillet</h3>
+            <p>A fast protein-focused skillet meal with herbs, vegetables, and a light finish.</p>
+            <div class="recipe-tags">
+              <span>High Protein</span>
+              <span>Easy</span>
+            </div>
+            <div class="card-actions">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                data-open-modal="recipeDetailModal"
+                data-recipe-title="Herb Chicken Skillet"
+                data-recipe-meta="Mediterranean • High Protein • Easy • 28 min"
+                data-recipe-description="A practical skillet meal designed for efficient weekday cooking with clean flavours."
+                data-recipe-ingredients="Chicken breast, zucchini, cherry tomatoes, garlic, rosemary, olive oil, lemon"
+                data-recipe-steps="Season chicken; sear in skillet; add vegetables; finish with herbs and lemon."
+              >
+                View Details
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="empty-state hidden mt-6" data-empty-state>
+          <h3 class="mb-2">No matching recipes found</h3>
+          <p>Try adjusting the search term or reset the selected filters.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-mark">F</span>
+            <span>FoodFusion</span>
+          </a>
+          <p>
+            A modern culinary platform for recipes, food learning, and community-led inspiration.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="mb-3">Explore</h4>
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="community.html">Community</a>
+            <a href="resources.html">Resources</a>
+            <a href="education.html">Education</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="mb-3">Social</h4>
+          <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="small-text">© 2026 FoodFusion. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#" class="small-text">Privacy Policy</a>
+          <a href="#" class="small-text">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-banner" id="cookieBanner" aria-live="polite">
+    <div class="cookie-inner">
+      <div>
+        <h4 class="mb-2">Cookie notice</h4>
+        <p class="small-text">
+          We use cookies to improve your browsing experience and support site functionality.
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button class="btn btn-secondary" type="button" data-cookie="decline">Decline</button>
+        <button class="btn btn-primary" type="button" data-cookie="accept">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Join Modal -->
+  <div class="modal" id="joinModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow">Join Us</span>
+        <h3 class="mb-2">Create your account</h3>
+        <p>Register to explore recipes, events, and community features.</p>
+      </div>
+
+      <form class="form-card" data-validate-form novalidate>
+        <div class="form-grid">
+          <div class="form-field">
+            <label class="form-label" for="firstName">First Name</label>
+            <input class="text-input" type="text" id="firstName" name="firstName" required />
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="lastName">Last Name</label>
+            <input class="text-input" type="text" id="lastName" name="lastName" required />
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field full-width">
+            <label class="form-label" for="joinEmail">Email Address</label>
+            <input class="text-input" type="email" id="joinEmail" name="email" required />
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field full-width">
+            <label class="form-label" for="joinPassword">Password</label>
+            <div class="password-wrap">
+              <input class="text-input" type="password" id="joinPassword" name="password" required minlength="6" />
+              <button class="password-toggle" type="button" data-toggle-password="#joinPassword">Show</button>
+            </div>
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field full-width">
+            <button class="btn btn-primary btn-block" type="submit">Join Now</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal" id="authModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow">Login</span>
+        <h3 class="mb-2">Access your account</h3>
+        <p>Login with lockout protection after repeated failed attempts.</p>
+      </div>
+
+      <form class="form-card" data-login-form novalidate>
+        <div class="form-field mb-4">
+          <label class="form-label" for="loginEmail">Email</label>
+          <input class="text-input" type="email" id="loginEmail" name="email" required />
+          <span class="error-text"></span>
+        </div>
+
+        <div class="form-field mb-4">
+          <label class="form-label" for="loginPassword">Password</label>
+          <div class="password-wrap">
+            <input class="text-input" type="password" id="loginPassword" name="password" required minlength="6" />
+            <button class="password-toggle" type="button" data-toggle-password="#loginPassword">Show</button>
+          </div>
+          <span class="error-text"></span>
+        </div>
+
+        <button class="btn btn-primary btn-block" type="submit">Login</button>
+
+        <div class="lockout-box hidden mt-4" data-lockout-message>
+          Too many failed attempts. Please wait
+          <strong data-lockout-timer>03:00</strong>
+          before trying again.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Recipe Detail Modal -->
+  <div class="modal" id="recipeDetailModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow">Recipe Details</span>
+        <h3 class="mb-2" data-modal-recipe-title>Recipe Title</h3>
+        <p data-modal-recipe-meta>Recipe meta information</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="stack">
+          <div class="media-placeholder" aria-hidden="true"></div>
+          <p data-modal-recipe-description>Recipe description appears here.</p>
+        </div>
+
+        <div class="stack">
+          <div>
+            <h4 class="mb-2">Ingredients</h4>
+            <p data-modal-recipe-ingredients>Ingredient list appears here.</p>
+          </div>
+
+          <div>
+            <h4 class="mb-2">Cooking Steps</h4>
+            <p data-modal-recipe-steps>Cooking steps appear here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

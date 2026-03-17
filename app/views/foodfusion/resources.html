@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodFusion | Resources</title>
+  <meta
+    name="description"
+    content="Explore FoodFusion cooking tutorials, kitchen hacks, culinary guides, downloadable recipe cards, and video resources."
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="FoodFusion home">
+        <span class="brand-mark">F</span>
+        <span>FoodFusion</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="navPanel"
+        data-nav-toggle
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-panel" id="navPanel">
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="community.html">Community</a>
+          <a href="resources.html" class="active">Resources</a>
+          <a href="education.html">Education</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn btn-ghost" type="button" data-open-modal="authModal">Login</button>
+          <button class="btn btn-primary" type="button" data-open-modal="joinModal">Join Us</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <!-- Compact intro -->
+    <section class="section-sm">
+      <div class="container">
+        <span class="eyebrow">Resource Library</span>
+        <div class="section-head">
+          <div>
+            <h1 class="section-title">Useful tools and guides for better cooking</h1>
+            <p class="section-text">
+              Browse practical tutorials, downloadable recipe cards, kitchen hacks,
+              culinary guides, and video-based learning resources.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resource categories -->
+    <section class="section-sm pt-0">
+      <div class="container">
+        <div class="grid grid-4">
+          <article class="card">
+            <div class="card-meta">
+              <span>Tutorials</span>
+            </div>
+            <h3 class="card-title">Cooking Tutorials</h3>
+            <p>Step-by-step practical content for improving technique and confidence.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-meta">
+              <span>Downloads</span>
+            </div>
+            <h3 class="card-title">Recipe Cards</h3>
+            <p>Quick, printable recipe references for easy kitchen use.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-meta">
+              <span>Efficiency</span>
+            </div>
+            <h3 class="card-title">Kitchen Hacks</h3>
+            <p>Small improvements that make preparation, storage, and cooking simpler.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-meta">
+              <span>Guides</span>
+            </div>
+            <h3 class="card-title">Culinary Guides</h3>
+            <p>Reference material to support ingredient knowledge and cooking decisions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cooking tutorials -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Cooking Tutorials</span>
+            <h2 class="section-title">Practical learning for everyday cooking</h2>
+            <p class="section-text">
+              Short, accessible tutorial content designed to improve everyday kitchen skills.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-media">
+              <img
+                src="https://images.unsplash.com/photo-1514986888952-8cd320577b68?auto=format&fit=crop&w=1200&q=80"
+                alt="Vegetables being prepared on a kitchen board"
+              />
+            </div>
+            <div class="card-meta">
+              <span>Beginner</span>
+            </div>
+            <h3 class="card-title">Knife Skills Basics</h3>
+            <p>
+              Learn foundational chopping, slicing, and dicing methods for safer and more efficient prep work.
+            </p>
+            <div class="card-actions">
+              <button class="btn btn-secondary" type="button" data-open-modal="resourceModal"
+                data-resource-title="Knife Skills Basics"
+                data-resource-type="Cooking Tutorial"
+                data-resource-description="A beginner-friendly guide to basic cutting techniques, grip, and ingredient prep."
+                data-resource-details="Focus areas include grip, slicing consistency, dicing onions, and safer cutting habits.">
+                View Resource
+              </button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80"
+                alt="Fresh ingredients arranged on a table"
+              />
+            </div>
+            <div class="card-meta">
+              <span>Practical</span>
+            </div>
+            <h3 class="card-title">Building Balanced Bowls</h3>
+            <p>
+              Understand how to combine grains, proteins, vegetables, and dressings into balanced meals.
+            </p>
+            <div class="card-actions">
+              <button class="btn btn-secondary" type="button" data-open-modal="resourceModal"
+                data-resource-title="Building Balanced Bowls"
+                data-resource-type="Cooking Tutorial"
+                data-resource-description="A practical lesson on assembling visually balanced and nutritionally complete bowls."
+                data-resource-details="Covers base ingredients, protein balance, dressing choices, and plating ideas.">
+                View Resource
+              </button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img
+                src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=1200&q=80"
+                alt="Pan cooking on a stovetop"
+              />
+            </div>
+            <div class="card-meta">
+              <span>Technique</span>
+            </div>
+            <h3 class="card-title">Pan Cooking Fundamentals</h3>
+            <p>
+              Improve heat control, searing, and ingredient timing for better stovetop cooking results.
+            </p>
+            <div class="card-actions">
+              <button class="btn btn-secondary" type="button" data-open-modal="resourceModal"
+                data-resource-title="Pan Cooking Fundamentals"
+                data-resource-type="Cooking Tutorial"
+                data-resource-description="An introduction to heat management, pan use, and cooking flow."
+                data-resource-details="Explains preheating, oil choice, ingredient timing, and avoiding overcrowding.">
+                View Resource
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Downloadable recipe cards -->
+    <section class="section surface-muted">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Downloadable Recipe Cards</span>
+            <h2 class="section-title">Quick references for the kitchen</h2>
+            <p class="section-text">
+              Ready-to-use recipe card resources that make cooking more convenient and organized.
+            </p>
+          </div>
+        </div>
+
+        <div class="resource-list">
+          <article class="resource-item">
+            <div>
+              <h3 class="card-title">Weeknight Pasta Recipe Card</h3>
+              <p>Short reference card for a simple pasta dinner workflow.</p>
+            </div>
+            <button class="btn btn-secondary" type="button" data-open-modal="downloadModal"
+              data-resource-title="Weeknight Pasta Recipe Card"
+              data-resource-type="Download"
+              data-resource-description="A printable pasta recipe card for quick weekday cooking."
+              data-resource-details="Includes ingredients, preparation order, and serving notes.">
+              Download
+            </button>
+          </article>
+
+          <article class="resource-item">
+            <div>
+              <h3 class="card-title">Healthy Bowl Recipe Card</h3>
+              <p>A compact guide for assembling grains, vegetables, and dressing combinations.</p>
+            </div>
+            <button class="btn btn-secondary" type="button" data-open-modal="downloadModal"
+              data-resource-title="Healthy Bowl Recipe Card"
+              data-resource-type="Download"
+              data-resource-description="A printable bowl-building card for quick lunches or light dinners."
+              data-resource-details="Includes suggested combinations for grains, greens, proteins, and sauces.">
+              Download
+            </button>
+          </article>
+
+          <article class="resource-item">
+            <div>
+              <h3 class="card-title">Quick Breakfast Recipe Card</h3>
+              <p>Reference ideas for simple breakfast plates and fast morning prep.</p>
+            </div>
+            <button class="btn btn-secondary" type="button" data-open-modal="downloadModal"
+              data-resource-title="Quick Breakfast Recipe Card"
+              data-resource-type="Download"
+              data-resource-description="A small-format breakfast guide for efficient morning cooking."
+              data-resource-details="Includes quick combinations using toast, eggs, fruit, yogurt, and grains.">
+              Download
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kitchen hacks + guides -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <div class="section-head">
+              <div>
+                <span class="eyebrow">Kitchen Hacks</span>
+                <h2 class="section-title">Small improvements that save time</h2>
+              </div>
+            </div>
+
+            <div class="stack">
+              <article class="card">
+                <h3 class="card-title">Prep ingredients before heat</h3>
+                <p>
+                  Organizing ingredients before cooking improves timing and reduces mistakes during preparation.
+                </p>
+              </article>
+
+              <article class="card">
+                <h3 class="card-title">Use labeled storage</h3>
+                <p>
+                  Clear containers and labels make leftovers, prepped vegetables, and sauces easier to manage.
+                </p>
+              </article>
+
+              <article class="card">
+                <h3 class="card-title">Group tools by task</h3>
+                <p>
+                  Keeping everyday utensils near prep zones reduces unnecessary movement during cooking.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div>
+            <div class="section-head">
+              <div>
+                <span class="eyebrow">Culinary Guides</span>
+                <h2 class="section-title">Reference material for better decisions in the kitchen</h2>
+              </div>
+            </div>
+
+            <div class="stack">
+              <article class="card">
+                <h3 class="card-title">Understanding herbs and flavour pairing</h3>
+                <p>
+                  Learn which herbs support freshness, depth, or brightness across different dishes.
+                </p>
+              </article>
+
+              <article class="card">
+                <h3 class="card-title">Choosing oils for cooking methods</h3>
+                <p>
+                  Compare oils for sautéing, dressing, roasting, and finishing based on flavour and use.
+                </p>
+              </article>
+
+              <article class="card">
+                <h3 class="card-title">Planning a balanced weekly menu</h3>
+                <p>
+                  A simple structure for combining variety, nutrition, and cooking efficiency through the week.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video resources -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Video Resources</span>
+            <h2 class="section-title">Short visual learning materials</h2>
+            <p class="section-text">
+              Video-based resources that support practical technique learning and visual understanding.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="media-placeholder" aria-hidden="true"></div>
+            <div class="card-meta">
+              <span>Video Lesson</span>
+            </div>
+            <h3 class="card-title">How to plate simple meals well</h3>
+            <p>A short visual guide to spacing, balance, and cleaner meal presentation.</p>
+            <div class="card-actions">
+              <button class="btn btn-secondary" type="button" data-open-modal="resourceModal"
+                data-resource-title="How to plate simple meals well"
+                data-resource-type="Video Resource"
+                data-resource-description="A visual lesson on making simple food look more intentional and balanced."
+                data-resource-details="Topics include composition, colour placement, and restrained garnish use.">
+                Watch Overview
+              </button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="media-placeholder" aria-hidden="true"></div>
+            <div class="card-meta">
+              <span>Video Lesson</span>
+            </div>
+            <h3 class="card-title">Meal prep fundamentals</h3>
+            <p>Practical steps for organizing ingredients and reducing weekday cooking friction.</p>
+            <div class="card-actions">
+              <button class="btn btn-secondary" type="button" data-open-modal="resourceModal"
+                data-resource-title="Meal prep fundamentals"
+                data-resource-type="Video Resource"
+                data-resource-description="A short tutorial on structuring prep sessions for efficiency."
+                data-resource-details="Covers storage, ingredient grouping, reheating, and planning.">
+                Watch Overview
+              </button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="media-placeholder" aria-hidden="true"></div>
+            <div class="card-meta">
+              <span>Video Lesson</span>
+            </div>
+            <h3 class="card-title">Beginner sauce basics</h3>
+            <p>Learn how simple sauces improve flavour, texture, and the overall finish of a dish.</p>
+            <div class="card-actions">
+              <button class="btn btn-secondary" type="button" data-open-modal="resourceModal"
+                data-resource-title="Beginner sauce basics"
+                data-resource-type="Video Resource"
+                data-resource-description="A concise guide to simple sauces and dressings for home cooking."
+                data-resource-details="Includes vinaigrettes, tahini-style dressings, herb sauces, and pan finishes.">
+                Watch Overview
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-mark">F</span>
+            <span>FoodFusion</span>
+          </a>
+          <p>
+            A modern culinary platform for recipes, food learning, and community-led inspiration.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="mb-3">Explore</h4>
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="community.html">Community</a>
+            <a href="resources.html">Resources</a>
+            <a href="education.html">Education</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="mb-3">Social</h4>
+          <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="small-text">© 2026 FoodFusion. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#" class="small-text">Privacy Policy</a>
+          <a href="#" class="small-text">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-banner" id="cookieBanner" aria-live="polite">
+    <div class="cookie-inner">
+      <div>
+        <h4 class="mb-2">Cookie notice</h4>
+        <p class="small-text">
+          We use cookies to improve your browsing experience and support site functionality.
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button class="btn btn-secondary" type="button" data-cookie="decline">Decline</button>
+        <button class="btn btn-primary" type="button" data-cookie="accept">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Join Modal -->
+  <div class="modal" id="joinModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow">Join Us</span>
+        <h3 class="mb-2">Create your account</h3>
+        <p>Register to explore recipes, events, and community features.</p>
+      </div>
+
+      <form class="form-card" data-validate-form novalidate>
+        <div class="form-grid">
+          <div class="form-field">
+            <label class="form-label" for="firstName">First Name</label>
+            <input class="text-input" type="text" id="firstName" name="firstName" required />
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="lastName">Last Name</label>
+            <input class="text-input" type="text" id="lastName" name="lastName" required />
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field full-width">
+            <label class="form-label" for="joinEmail">Email Address</label>
+            <input class="text-input" type="email" id="joinEmail" name="email" required />
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field full-width">
+            <label class="form-label" for="joinPassword">Password</label>
+            <div class="password-wrap">
+              <input class="text-input" type="password" id="joinPassword" name="password" required minlength="6" />
+              <button class="password-toggle" type="button" data-toggle-password="#joinPassword">Show</button>
+            </div>
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field full-width">
+            <button class="btn btn-primary btn-block" type="submit">Join Now</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal" id="authModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow">Login</span>
+        <h3 class="mb-2">Access your account</h3>
+        <p>Login with lockout protection after repeated failed attempts.</p>
+      </div>
+
+      <form class="form-card" data-login-form novalidate>
+        <div class="form-field mb-4">
+          <label class="form-label" for="loginEmail">Email</label>
+          <input class="text-input" type="email" id="loginEmail" name="email" required />
+          <span class="error-text"></span>
+        </div>
+
+        <div class="form-field mb-4">
+          <label class="form-label" for="loginPassword">Password</label>
+          <div class="password-wrap">
+            <input class="text-input" type="password" id="loginPassword" name="password" required minlength="6" />
+            <button class="password-toggle" type="button" data-toggle-password="#loginPassword">Show</button>
+          </div>
+          <span class="error-text"></span>
+        </div>
+
+        <button class="btn btn-primary btn-block" type="submit">Login</button>
+
+        <div class="lockout-box hidden mt-4" data-lockout-message>
+          Too many failed attempts. Please wait
+          <strong data-lockout-timer>03:00</strong>
+          before trying again.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Resource Detail Modal -->
+  <div class="modal" id="resourceModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow" data-resource-type>Resource</span>
+        <h3 class="mb-2" data-resource-title>Resource Title</h3>
+        <p data-resource-description>Resource description appears here.</p>
+      </div>
+
+      <div class="stack">
+        <div class="media-placeholder" aria-hidden="true"></div>
+        <p data-resource-details>
+          More information about the selected resource appears here.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Download Modal -->
+  <div class="modal" id="downloadModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow" data-resource-type>Download</span>
+        <h3 class="mb-2" data-resource-title>Download Resource</h3>
+        <p data-resource-description>Resource description appears here.</p>
+      </div>
+
+      <div class="stack">
+        <p data-resource-details>
+          Download details appear here.
+        </p>
+        <button class="btn btn-primary" type="button">Download Now</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

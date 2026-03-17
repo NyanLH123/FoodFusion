@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodFusion | Education</title>
+  <meta
+    name="description"
+    content="Explore FoodFusion educational cooking materials, infographics, technique guides, and structured learning content."
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="FoodFusion home">
+        <span class="brand-mark">F</span>
+        <span>FoodFusion</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="navPanel"
+        data-nav-toggle
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-panel" id="navPanel">
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="community.html">Community</a>
+          <a href="resources.html">Resources</a>
+          <a href="education.html" class="active">Education</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn btn-ghost" type="button" data-open-modal="authModal">Login</button>
+          <button class="btn btn-primary" type="button" data-open-modal="joinModal">Join Us</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <!-- Intro -->
+    <section class="section-sm">
+      <div class="container">
+        <span class="eyebrow">Education Hub</span>
+        <div class="section-head">
+          <div>
+            <h1 class="section-title">Learn cooking through structure, technique, and visual guidance</h1>
+            <p class="section-text">
+              FoodFusion Education is designed to help users build stronger kitchen knowledge through
+              concise lessons, practical technique guides, and educational materials that support long-term improvement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning overview -->
+    <section class="section-sm pt-0">
+      <div class="container">
+        <div class="grid grid-2">
+          <div class="story-panel">
+            <span class="eyebrow">What You’ll Learn</span>
+            <h2 class="mb-3">A more structured approach to culinary learning</h2>
+            <p class="mb-4">
+              This section supports learners who want more than recipe browsing. It organizes core
+              topics into practical knowledge areas such as preparation, flavour, kitchen workflow,
+              and foundational techniques.
+            </p>
+            <div class="recipe-tags">
+              <span>Technique</span>
+              <span>Infographics</span>
+              <span>Guided Learning</span>
+            </div>
+          </div>
+
+          <div class="grid">
+            <article class="card">
+              <div class="card-meta">
+                <span>Focus Area</span>
+              </div>
+              <h3 class="card-title">Preparation Skills</h3>
+              <p>
+                Understand ingredient handling, cutting methods, and workflow organization.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card-meta">
+                <span>Focus Area</span>
+              </div>
+              <h3 class="card-title">Cooking Techniques</h3>
+              <p>
+                Learn essential methods such as sautéing, roasting, boiling, and pan finishing.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card-meta">
+                <span>Focus Area</span>
+              </div>
+              <h3 class="card-title">Taste and Balance</h3>
+              <p>
+                Explore how flavour, texture, seasoning, and presentation work together in a dish.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infographic style section -->
+    <section class="section surface-muted">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Visual Learning</span>
+            <h2 class="section-title">Infographic-style learning blocks</h2>
+            <p class="section-text">
+              These compact learning summaries present key ideas in a clearer and more visual way.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="stat-value">01</div>
+            <h3 class="card-title mt-4">Prep</h3>
+            <p>
+              Organize ingredients before cooking to improve timing, reduce stress, and support cleaner execution.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="stat-value">02</div>
+            <h3 class="card-title mt-4">Cook</h3>
+            <p>
+              Match cooking method to ingredient type for better texture, flavour, and consistency.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="stat-value">03</div>
+            <h3 class="card-title mt-4">Finish</h3>
+            <p>
+              Use seasoning, garnish, and plating thoughtfully so the final dish feels balanced and complete.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technique guides -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Technique Guides</span>
+            <h2 class="section-title">Core practical skills</h2>
+            <p class="section-text">
+              Each guide focuses on one essential area of cooking knowledge and supports step-by-step improvement.
+            </p>
+          </div>
+        </div>
+
+        <div class="resource-list">
+          <article class="resource-item">
+            <div>
+              <h3 class="card-title">Knife handling and prep safety</h3>
+              <p>Build confidence in cutting technique, consistency, and safer preparation habits.</p>
+            </div>
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-open-modal="educationModal"
+              data-education-title="Knife handling and prep safety"
+              data-education-type="Technique Guide"
+              data-education-description="A guide to basic knife grip, controlled cutting, and safer preparation habits."
+              data-education-details="Covers grip, slicing motion, stable cutting surfaces, ingredient consistency, and reducing prep mistakes."
+            >
+              View Guide
+            </button>
+          </article>
+
+          <article class="resource-item">
+            <div>
+              <h3 class="card-title">Heat control on the stovetop</h3>
+              <p>Understand when to use low, medium, and high heat for better cooking results.</p>
+            </div>
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-open-modal="educationModal"
+              data-education-title="Heat control on the stovetop"
+              data-education-type="Technique Guide"
+              data-education-description="A focused guide on managing heat levels while sautéing, simmering, and searing."
+              data-education-details="Explains heat response, pan preparation, oil use, and avoiding burning or undercooking."
+            >
+              View Guide
+            </button>
+          </article>
+
+          <article class="resource-item">
+            <div>
+              <h3 class="card-title">Seasoning and flavour balance</h3>
+              <p>Learn how acidity, salt, herbs, and richness work together in a finished dish.</p>
+            </div>
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-open-modal="educationModal"
+              data-education-title="Seasoning and flavour balance"
+              data-education-type="Technique Guide"
+              data-education-description="A guide to understanding how seasoning shapes the final taste of food."
+              data-education-details="Includes salt balance, acid use, fresh herbs, layering flavour, and final adjustments before serving."
+            >
+              View Guide
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning paths -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Learning Paths</span>
+            <h2 class="section-title">Choose a path that matches your level</h2>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="story-panel">
+            <span class="eyebrow">Beginner</span>
+            <h3 class="mb-3">Start with the essentials</h3>
+            <p class="mb-4">
+              Focus on prep habits, basic knife use, simple stovetop methods, and ingredient familiarity.
+            </p>
+            <div class="recipe-tags">
+              <span>Prep basics</span>
+              <span>Simple methods</span>
+            </div>
+          </article>
+
+          <article class="story-panel">
+            <span class="eyebrow">Intermediate</span>
+            <h3 class="mb-3">Build confidence and control</h3>
+            <p class="mb-4">
+              Improve timing, seasoning decisions, meal organization, and multi-step recipe execution.
+            </p>
+            <div class="recipe-tags">
+              <span>Timing</span>
+              <span>Balance</span>
+            </div>
+          </article>
+
+          <article class="story-panel">
+            <span class="eyebrow">Advanced</span>
+            <h3 class="mb-3">Refine technique and presentation</h3>
+            <p class="mb-4">
+              Work on cleaner execution, stronger plating decisions, and more deliberate flavour composition.
+            </p>
+            <div class="recipe-tags">
+              <span>Technique</span>
+              <span>Presentation</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing section -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="grid grid-2">
+          <div class="card">
+            <span class="eyebrow">Education Goal</span>
+            <h2 class="mb-3">Help users cook with more confidence</h2>
+            <p>
+              The Education section is designed to support progress beyond recipes, giving learners
+              structure, clarity, and practical guidance they can apply in everyday cooking.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="eyebrow">Next Step</span>
+            <h2 class="mb-3">Put learning into practice</h2>
+            <p class="mb-4">
+              Use the recipe collection and community cookbook to apply what you learn through real cooking.
+            </p>
+            <div class="hero-actions">
+              <a href="recipes.html" class="btn btn-primary">Browse Recipes</a>
+              <a href="community.html" class="btn btn-secondary">Visit Community</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-mark">F</span>
+            <span>FoodFusion</span>
+          </a>
+          <p>
+            A modern culinary platform for recipes, food learning, and community-led inspiration.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="mb-3">Explore</h4>
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="community.html">Community</a>
+            <a href="resources.html">Resources</a>
+            <a href="education.html">Education</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="mb-3">Social</h4>
+          <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="small-text">© 2026 FoodFusion. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#" class="small-text">Privacy Policy</a>
+          <a href="#" class="small-text">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-banner" id="cookieBanner" aria-live="polite">
+    <div class="cookie-inner">
+      <div>
+        <h4 class="mb-2">Cookie notice</h4>
+        <p class="small-text">
+          We use cookies to improve your browsing experience and support site functionality.
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button class="btn btn-secondary" type="button" data-cookie="decline">Decline</button>
+        <button class="btn btn-primary" type="button" data-cookie="accept">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Join Modal -->
+  <div class="modal" id="joinModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow">Join Us</span>
+        <h3 class="mb-2">Create your account</h3>
+        <p>Register to explore recipes, events, and community features.</p>
+      </div>
+
+      <form class="form-card" data-validate-form novalidate>
+        <div class="form-grid">
+          <div class="form-field">
+            <label class="form-label" for="firstName">First Name</label>
+            <input class="text-input" type="text" id="firstName" name="firstName" required />
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="lastName">Last Name</label>
+            <input class="text-input" type="text" id="lastName" name="lastName" required />
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field full-width">
+            <label class="form-label" for="joinEmail">Email Address</label>
+            <input class="text-input" type="email" id="joinEmail" name="email" required />
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field full-width">
+            <label class="form-label" for="joinPassword">Password</label>
+            <div class="password-wrap">
+              <input class="text-input" type="password" id="joinPassword" name="password" required minlength="6" />
+              <button class="password-toggle" type="button" data-toggle-password="#joinPassword">Show</button>
+            </div>
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-field full-width">
+            <button class="btn btn-primary btn-block" type="submit">Join Now</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal" id="authModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow">Login</span>
+        <h3 class="mb-2">Access your account</h3>
+        <p>Login with lockout protection after repeated failed attempts.</p>
+      </div>
+
+      <form class="form-card" data-login-form novalidate>
+        <div class="form-field mb-4">
+          <label class="form-label" for="loginEmail">Email</label>
+          <input class="text-input" type="email" id="loginEmail" name="email" required />
+          <span class="error-text"></span>
+        </div>
+
+        <div class="form-field mb-4">
+          <label class="form-label" for="loginPassword">Password</label>
+          <div class="password-wrap">
+            <input class="text-input" type="password" id="loginPassword" name="password" required minlength="6" />
+            <button class="password-toggle" type="button" data-toggle-password="#loginPassword">Show</button>
+          </div>
+          <span class="error-text"></span>
+        </div>
+
+        <button class="btn btn-primary btn-block" type="submit">Login</button>
+
+        <div class="lockout-box hidden mt-4" data-lockout-message>
+          Too many failed attempts. Please wait
+          <strong data-lockout-timer>03:00</strong>
+          before trying again.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Education Modal -->
+  <div class="modal" id="educationModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">✕</button>
+
+      <div class="modal-head">
+        <span class="eyebrow" data-education-type>Learning Resource</span>
+        <h3 class="mb-2" data-education-title>Education Title</h3>
+        <p data-education-description>Education description appears here.</p>
+      </div>
+
+      <div class="stack">
+        <div class="media-placeholder" aria-hidden="true"></div>
+        <p data-education-details>
+          Additional educational details appear here.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
