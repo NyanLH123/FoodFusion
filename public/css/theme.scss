@@ -1,0 +1,32 @@
+// FoodFusion Custom Bootstrap 5 Theme
+$primary: #d96a2b;
+$secondary: #bf5d24;
+$accent: #d96a2b;
+$dark: #221a14;
+$light: #ffffff;
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-headings: 'Playfair Display', serif;
+$border-radius: 0.25rem;
+$btn-border-radius: 0.25rem;
+
+.ff-hero {
+  background: $light;
+}
+
+.ff-card {
+  border: 1px solid #e7ddd4;
+  box-shadow: 0 1px 3px rgba(34, 26, 20, 0.06);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.ff-card:hover {
+  border-color: #dcc5b6;
+  box-shadow: 0 6px 16px rgba(34, 26, 20, 0.10);
+}
+
+.ff-badge-cuisine { background-color: $secondary; color: white; }
+.ff-badge-difficulty-easy { background-color: #52b788; color: #fff; }
+.ff-badge-difficulty-medium { background-color: #f4a261; color: #fff; }
+.ff-badge-difficulty-hard { background-color: #e63946; color: #fff; }
+.ff-nav { background-color: $light; }
+.ff-footer { background-color: $light; color: #56483d; }

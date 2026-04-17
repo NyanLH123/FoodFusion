@@ -1,0 +1,230 @@
+:root {
+    --ff-bg: #fff8ef;
+    --ff-surface: #ffffff;
+    --ff-text: #2a1f16;
+    --ff-muted: #6e6257;
+    --ff-brand: #f59f00;
+    --ff-brand-dark: #cc7a00;
+    --ff-accent: #0f766e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    color: var(--ff-text);
+    background: radial-gradient(circle at 20% 10%, #fff1d6 0%, var(--ff-bg) 40%, #fffdf9 100%);
+    min-height: 100vh;
+}
+
+.ff-page-bg {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(245, 159, 0, 0.06), rgba(15, 118, 110, 0.05));
+    pointer-events: none;
+    z-index: -1;
+}
+
+.ff-main {
+    min-height: 72vh;
+}
+
+.ff-heading,
+.ff-brand {
+    font-family: 'Fraunces', serif;
+}
+
+.ff-navbar {
+    background: rgba(37, 24, 13, 0.92);
+    backdrop-filter: blur(8px);
+}
+
+.ff-navbar .nav-link,
+.ff-navbar .navbar-brand {
+    color: #fff;
+}
+
+.ff-navbar .nav-link:hover,
+.ff-navbar .nav-link.active {
+    color: var(--ff-brand);
+}
+
+.ff-navbar .dropdown-menu {
+    border: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.section-space {
+    padding-top: 4.2rem;
+    padding-bottom: 4.2rem;
+}
+
+.section-space-sm {
+    padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
+}
+
+.ff-hero {
+    position: relative;
+    padding-top: 4rem;
+}
+
+.ff-hero-image-wrap {
+    position: relative;
+}
+
+.ff-hero-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.ff-card,
+.card {
+    background: var(--ff-surface);
+    border-radius: 1rem;
+}
+
+.ff-card-image,
+.ff-detail-image,
+.ff-team-image,
+.ff-carousel-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.ff-card-image,
+.ff-team-image {
+    aspect-ratio: 16 / 10;
+}
+
+.ff-detail-image {
+    max-height: 460px;
+}
+
+.ff-carousel-image {
+    aspect-ratio: 16 / 8;
+}
+
+.ff-carousel-caption {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.72));
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem 1.5rem 1.2rem;
+}
+
+.ff-footer {
+    background: #1f150f;
+    color: #f5ebdf;
+}
+
+.ff-cookie-banner {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    max-width: 460px;
+    background: rgba(31, 21, 15, 0.96);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 0.85rem;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+    z-index: 1080;
+    display: none;
+}
+
+.ff-flash-stack {
+    position: fixed;
+    top: 5rem;
+    right: 1rem;
+    z-index: 1090;
+    width: min(420px, calc(100vw - 2rem));
+}
+
+.ff-overlay-alert {
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    border: 0;
+    margin-bottom: 0.75rem;
+}
+
+.ff-resource-search {
+    max-width: 260px;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.navbar-toggler:focus,
+.btn:focus,
+.form-control:focus,
+.form-select:focus,
+.dropdown-item:focus {
+    outline: 3px solid rgba(245, 159, 0, 0.35);
+    box-shadow: none;
+}
+
+@media (max-width: 991px) {
+    .ff-navbar .navbar-nav {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        row-gap: 0.6rem;
+    }
+
+    .section-space {
+        padding-top: 3.2rem;
+        padding-bottom: 3.2rem;
+    }
+
+    .ff-resource-search {
+        max-width: 100%;
+    }
+}
+
+.ff-list-hero {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 246, 230, 0.95));
+    border: 1px solid rgba(42, 31, 22, 0.08);
+}
+
+.ff-filter-panel {
+    border: 1px solid rgba(42, 31, 22, 0.08);
+    background: #fff;
+}
+
+.ff-metric-card {
+    background: #fff;
+    border: 1px solid rgba(42, 31, 22, 0.08);
+    border-radius: 0.9rem;
+    padding: 0.85rem 0.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-height: 100%;
+}
+
+.ff-metric-value {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--ff-text);
+    line-height: 1.2;
+}
+
+.ff-metric-label {
+    font-size: 0.76rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ff-muted);
+}
+
+.ff-elevated-card {
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.ff-elevated-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(21, 16, 13, 0.12) !important;
+}
+

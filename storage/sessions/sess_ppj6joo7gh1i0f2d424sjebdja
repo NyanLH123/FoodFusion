@@ -1,0 +1,1 @@
+_auth_user|a:10:{s:6:"userId";i:2;s:9:"firstname";s:3:"Mia";s:8:"lastname";s:5:"Lopez";s:4:"role";i:0;s:6:"status";s:6:"active";s:5:"email";s:15:"mia@example.com";s:8:"password";s:60:"$2y$10$kFKwEc1e5PAAkXqHqLa69eZATHnkNuGTwvRuqVAwcFhw6mUJSpmmy";s:14:"login_attempts";i:0;s:12:"locked_until";N;s:10:"created_at";s:19:"2026-04-08 12:36:00";}_flash|a:0:{}
